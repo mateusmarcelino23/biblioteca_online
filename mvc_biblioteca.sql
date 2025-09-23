@@ -47,9 +47,9 @@ CREATE TABLE `alunos` (
   `professor_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-
-
--- --------------------------------------------------------
+--
+-- Despejando dados para a tabela `alunos`
+-
 
 --
 -- Estrutura para tabela `backup_log`
@@ -64,7 +64,27 @@ CREATE TABLE `backup_log` (
   `automatico` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
--- --------------------------------------------------------
+--
+-- Despejando dados para a tabela `backup_log`
+--
+
+--
+-- Estrutura para tabela `configuracoes`
+--
+
+CREATE TABLE `configuracoes` (
+  `id` int(11) NOT NULL,
+  `dias_emprestimo` int(11) NOT NULL DEFAULT 7,
+  `max_livros_aluno` int(11) NOT NULL DEFAULT 3,
+  `max_renovacoes` int(11) NOT NULL DEFAULT 2,
+  `multa_dia_atraso` decimal(10,2) NOT NULL DEFAULT 0.50,
+  `backup_automatico` tinyint(1) NOT NULL DEFAULT 1,
+  `email_notificacao` varchar(255) NOT NULL,
+  `tema_padrao` enum('light','dark') NOT NULL DEFAULT 'light',
+  `data_atualizacao` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+
 -- --------------------------------------------------------
 
 --
@@ -80,9 +100,6 @@ CREATE TABLE `emprestimos` (
   `devolvido` varchar(50) NOT NULL,
   `professor_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
-
--- --------------------------------------------------------
 
 --
 -- Estrutura para tabela `livros`
@@ -117,13 +134,6 @@ CREATE TABLE `professores` (
   `ativo` tinyint(1) DEFAULT 1,
   `admin` tinyint(1) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Despejando dados para a tabela `professores`
---
-
-INSERT INTO `professores` (`id`, `nome`, `email`, `cpf`, `senha`, `data_cadastro`, `ultimo_login`, `ativo`, `admin`) VALUES
-(1, 'alefteste1', 'alefteste1@gmail.com', '72316609082', '$2y$10$YuNDRe6vCVqyjfo/6soKHOyNUI2f2U2RYtJAj6kcAkdvF4H5zHxCG', '2025-04-26 18:36:20', '2025-09-03 08:01:23', 1, 0);
 
 --
 -- Índices para tabelas despejadas
