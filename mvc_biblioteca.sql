@@ -129,7 +129,7 @@ CREATE TABLE `professores` (
 
 
 INSERT INTO `professores` (`id`, `nome`, `email`, `cpf`, `senha`, `data_cadastro`, `ultimo_login`, `ativo`, `admin`) VALUES
-(4, 'alefteste1', 'alefteste1@gmail.com', '72316609082', '$2y$10$YuNDRe6vCVqyjfo/6soKHOyNUI2f2U2RYtJAj6kcAkdvF4H5zHxCG', '2025-04-26 18:36:20', '2025-09-03 08:01:23', 1, 0);
+(1, 'alefteste1', 'alefteste1@gmail.com', '72316609082', '$2y$10$YuNDRe6vCVqyjfo/6soKHOyNUI2f2U2RYtJAj6kcAkdvF4H5zHxCG', '2025-04-26 18:36:20', '2025-09-03 08:01:23', 1, 0);
 
 --
 -- Índices para tabelas despejadas
