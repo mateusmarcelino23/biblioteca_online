@@ -1,0 +1,1650 @@
+2025-09-24 12:37:43 - Processando livro - Detalhes: Array
+(
+    [id] => mPzUH1EPEJkC
+    [dados] => Array
+        (
+            [kind] => books#volume
+            [id] => mPzUH1EPEJkC
+            [etag] => ypp2x6Ut0eY
+            [selfLink] => https://www.googleapis.com/books/v1/volumes/mPzUH1EPEJkC
+            [volumeInfo] => Array
+                (
+                    [title] => PHP and MySQL by Example
+                    [authors] => Array
+                        (
+                            [0] => Ellie Quigley
+                            [1] => Marko Gargenta
+                        )
+
+                    [publisher] => Prentice Hall Professional
+                    [publishedDate] => 2006-11-22
+                    [description] => <b>Quickly master dynamic, database-driven Web development–no experience necessary!</b> <p>Even if you’re completely new to PHP, MySQL, and Web database development, this book will guide you through every step of building powerful, database-driven, dynamic Web sites. Direct from the world’s top scripting instructor, Ellie Quigley, <b><i>PHP and MySQL by Example</i></b> illuminates every concept with tested code examples, screen shots showing program output, and clear, line-by-line explanations. </p> <p>Classroom-tested in Ellie Quigley’s Silicon Valley training courses and at Marko Gargenta’s Marakana training company in San Francisco, this book takes you from the simplest PHP scripting and SQL querying techniques all the way to dynamic, database driven Web site construction with PHP and MySQL. From simple fill-in forms to program security and debugging, it’s the only PHP/MySQL book you’ll ever need!</p> <p>This book covers</p> <ul> <li>Complete PHP fundamentals, including operators, strings, conditionals, loops, arrays, functions, and more </li> <li>PHP QuickStart for more advanced readers–makes you productive with PHP in the space of just fifteen book pages </li> <li>Essential Web development techniques, from file handling to validating user input with regular expressions </li> <li>Powerful PHP features, including user-defined functions and self-processing PHP Forms </li> <li>Day-to-day MySQL administration </li> <li>A complete SQL tutorial for creating queries, retrieving data, and writing data with MySQL </li> <li>Session management and cookies </li> <li>Object Oriented PHP </li> <li>Best practices for using PHP and MySQL together</li> </ul> <p>Nearly 100,000 professionals and power users have relied on Ellie Quigley’s books to master scripting languages. With <b><i>PHP and MySQL by Example,</i></b> you can, too. And once you’ve become an expert, you’ll turn to this book constantly as your go-to source for reliable answers, solutions, and code.</p> <p> </p> <b>Lab Solutions</b> <p>Solutions to the end-of-chapter labs are available at www.prenhallprofessional.com/title/0131875086.</p>
+                    [industryIdentifiers] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [type] => ISBN_10
+                                    [identifier] => 0138006024
+                                )
+
+                            [1] => Array
+                                (
+                                    [type] => ISBN_13
+                                    [identifier] => 9780138006020
+                                )
+
+                        )
+
+                    [readingModes] => Array
+                        (
+                            [text] => 1
+                            [image] => 1
+                        )
+
+                    [pageCount] => 912
+                    [printedPageCount] => 910
+                    [printType] => BOOK
+                    [categories] => Array
+                        (
+                            [0] => Computers / Languages / General
+                            [1] => Computers / Internet / Web Programming
+                        )
+
+                    [averageRating] => 5
+                    [ratingsCount] => 5
+                    [maturityRating] => NOT_MATURE
+                    [allowAnonLogging] => 1
+                    [contentVersion] => 2.7.7.0.preview.3
+                    [panelizationSummary] => Array
+                        (
+                            [containsEpubBubbles] => 
+                            [containsImageBubbles] => 
+                        )
+
+                    [imageLinks] => Array
+                        (
+                            [smallThumbnail] => http://books.google.com/books/content?id=mPzUH1EPEJkC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE712vcqy0AceCJe4XoMEYH42KXHtuuNdC1wFTNfZ3xluVHmPtXxKLQM4gxgWLvTFXg4BNHCvlLQXPuMMc-3LZWf15Svhm6LujpDSh15f8ZoV0-MLxIQZ006roUndlaKCBNqovIw_&source=gbs_api
+                            [thumbnail] => http://books.google.com/books/content?id=mPzUH1EPEJkC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73_9TD_RNXT5hK0UpL4GhLMEbcj7Sw2Uvow2Hn7rNiNaND9fkOdN1fId_yrBywSopMEQNAHxVogUFROJQQfkwVUKyjnLHvGrs7dJFrYy6mB4QpvNiofW0rekEA59_nbjReI0hbk&source=gbs_api
+                            [small] => http://books.google.com/books/content?id=mPzUH1EPEJkC&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE72tXxy3SW33gGuPsCYHr1plsz-MrOzO60PrsEFGA-AH9j2ExUS1WlMv8S2ja9om_M3E-Y0Uf5HW_8hhOXQ5hKw-kTXa7N5CK5QG838xoo7mv-uY1_nbb1oiiAdgvsSumxPIvDL8&source=gbs_api
+                            [medium] => http://books.google.com/books/content?id=mPzUH1EPEJkC&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE71KCTLdLrWvjBN8930bZmQsl7kn_IAFbkIsWiqnijhAv45D02l2f2dzlrEbljFzaJhkm0PEhNSPrLvGeOKt1Tks_vGkAzD2mmhW285r8KC8DoYW9kyl58VB4VKa4LHEsDfeWwZj&source=gbs_api
+                            [large] => http://books.google.com/books/content?id=mPzUH1EPEJkC&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE73LJzIfs8m6OGZ-pTTpEZkINPz4tSoYIsT9GaIGBPpaKi05mxWpg2BiB6NrHQib6dJbljujE8yqj_mMx4CfEIOdRetnVW90U777nzcoDl_B-AyoPy9RuSIOV3yxHibJ8z-ITFTC&source=gbs_api
+                        )
+
+                    [language] => en
+                    [previewLink] => http://books.google.com.br/books?id=mPzUH1EPEJkC&hl=&source=gbs_api
+                    [infoLink] => https://play.google.com/store/books/details?id=mPzUH1EPEJkC&source=gbs_api
+                    [canonicalVolumeLink] => https://play.google.com/store/books/details?id=mPzUH1EPEJkC
+                )
+
+            [layerInfo] => Array
+                (
+                    [layers] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [layerId] => geo
+                                    [volumeAnnotationsVersion] => 7
+                                )
+
+                        )
+
+                )
+
+            [saleInfo] => Array
+                (
+                    [country] => BR
+                    [saleability] => FOR_SALE
+                    [isEbook] => 1
+                    [listPrice] => Array
+                        (
+                            [amount] => 153.54
+                            [currencyCode] => BRL
+                        )
+
+                    [retailPrice] => Array
+                        (
+                            [amount] => 153.54
+                            [currencyCode] => BRL
+                        )
+
+                    [buyLink] => https://play.google.com/store/books/details?id=mPzUH1EPEJkC&rdid=book-mPzUH1EPEJkC&rdot=1&source=gbs_api
+                    [offers] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [finskyOfferType] => 1
+                                    [listPrice] => Array
+                                        (
+                                            [amountInMicros] => 153540000
+                                            [currencyCode] => BRL
+                                        )
+
+                                    [retailPrice] => Array
+                                        (
+                                            [amountInMicros] => 153540000
+                                            [currencyCode] => BRL
+                                        )
+
+                                    [giftable] => 1
+                                )
+
+                        )
+
+                )
+
+            [accessInfo] => Array
+                (
+                    [country] => BR
+                    [viewability] => PARTIAL
+                    [embeddable] => 1
+                    [publicDomain] => 
+                    [textToSpeechPermission] => ALLOWED_FOR_ACCESSIBILITY
+                    [epub] => Array
+                        (
+                            [isAvailable] => 
+                        )
+
+                    [pdf] => Array
+                        (
+                            [isAvailable] => 
+                        )
+
+                    [webReaderLink] => http://play.google.com/books/reader?id=mPzUH1EPEJkC&hl=&source=gbs_api
+                    [accessViewStatus] => SAMPLE
+                    [quoteSharingAllowed] => 
+                )
+
+        )
+
+)
+
+2025-09-24 12:37:47 - Processando livro - Detalhes: Array
+(
+    [id] => Q9OP0ClTTvIC
+    [dados] => Array
+        (
+            [kind] => books#volume
+            [id] => Q9OP0ClTTvIC
+            [etag] => Cyrfrsd1nL4
+            [selfLink] => https://www.googleapis.com/books/v1/volumes/Q9OP0ClTTvIC
+            [volumeInfo] => Array
+                (
+                    [title] => PHP 5 For Dummies
+                    [authors] => Array
+                        (
+                            [0] => Janet Valade
+                        )
+
+                    [publisher] => John Wiley & Sons
+                    [publishedDate] => 2004-04-26
+                    [description] => Covers the latest major release of PHP, the most popular open source Web scripting language, in the friendly, easy-to-understand For Dummies style <ul> <li>PHP is installed on nearly nine million servers, and usage has grown at the rate of 6.5 percent per month for the past two years</li> <li>PHP is easy to learn, well suited for Web development, and can be embedded with HTML, making it a good choice for creating dynamic Web pages for e-commerce sites and other Web applications; a database-friendly language, it connects easily to Sybase, MySQL, mSQL, Oracle, and other databases</li> <li>Explains how to acquire and install PHP, how PHP's features make it a useful scripting language, and how to use PHP for three of the most common applications: interactive Web sites, database storage, and common operating system tasks</li> </ul>
+                    [industryIdentifiers] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [type] => ISBN_10
+                                    [identifier] => 0764556622
+                                )
+
+                            [1] => Array
+                                (
+                                    [type] => ISBN_13
+                                    [identifier] => 9780764556623
+                                )
+
+                        )
+
+                    [readingModes] => Array
+                        (
+                            [text] => 
+                            [image] => 1
+                        )
+
+                    [pageCount] => 408
+                    [printedPageCount] => 410
+                    [dimensions] => Array
+                        (
+                            [height] => 23.00 cm
+                        )
+
+                    [printType] => BOOK
+                    [categories] => Array
+                        (
+                            [0] => Computers / Internet / Web Design
+                            [1] => Computers / Programming / General
+                        )
+
+                    [averageRating] => 3.5
+                    [ratingsCount] => 4
+                    [maturityRating] => NOT_MATURE
+                    [allowAnonLogging] => 1
+                    [contentVersion] => 3.3.2.0.preview.1
+                    [panelizationSummary] => Array
+                        (
+                            [containsEpubBubbles] => 
+                            [containsImageBubbles] => 
+                        )
+
+                    [imageLinks] => Array
+                        (
+                            [smallThumbnail] => http://books.google.com/books/content?id=Q9OP0ClTTvIC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE716Mwu4XfgmCz_N0taRcJq02PXTQALdG7u1Iv0fF4m5i8DzkypLl-eHuo5VWhmAcJRtAnAqYO95Z-Rkee3EMn0nZ952eYV_YZ-hmIDdCBjR0MENpf2X-4UYcH6TTxZDLOvHG461&source=gbs_api
+                            [thumbnail] => http://books.google.com/books/content?id=Q9OP0ClTTvIC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70StddWeC973aJ0qFDk8sPHU6i50HJ5EWycpXOxU598C14ShfRLz-1grKUZou9vKOUBjfSPomRgLfrbXjb56SaixfJ2oPwxf1VpNoqwnc70kjMIEFTTcOwW18LCXoCPVP80lt4L&source=gbs_api
+                            [small] => http://books.google.com/books/content?id=Q9OP0ClTTvIC&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE73vWZ5xcp1b61eqWgnMjxmnuPlVunSJFZNY7XDNgtpfH9ju-zxwd0HfhoiA0ACY6Am-fkMAbFpXJ_VTbUrzSQJm3gOtnP5EmCc3IAzbv0fVCTnmCwrZ5ys5jQWn2nsNgnQB9WAc&source=gbs_api
+                            [medium] => http://books.google.com/books/content?id=Q9OP0ClTTvIC&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE72me_V46EPEakzsLF1Xfd9edZoz2iOZJBVG9rWQyBd12R-geRiBmQzE2bTwrz47SjIMh1moNWJJVOcz_e3msbFkdb_-y_Rga-KySRA4Gbw0NsnXO9sxc6HN11Uif2TmXlyC7DoG&source=gbs_api
+                            [large] => http://books.google.com/books/content?id=Q9OP0ClTTvIC&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE70E1kou9DyFMBLwwjKWWVybkZjNvbZyxPTk3GJVEsCLDRr-Rjxjb34qsLuX0JBqN5ATglalHjMnDDMNpnfSgXXw5-xKu5N7r7N5K9EOrNLHPgJp1_rfuoKJR-cSZHoHHiBrv3BD&source=gbs_api
+                            [extraLarge] => http://books.google.com/books/content?id=Q9OP0ClTTvIC&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE72KG6u5ea8RDhakwaHVcbCzsmdF2lD_lL5tmb1CntFDpaWybLYCVWl7KKgLKifV92OXpYnAgmwxU_KturKnQLa7UiAS6KbiqVN0nDmFsYMcxQk4zwnQu48VBu2gPpC0G7ijX8DS&source=gbs_api
+                        )
+
+                    [language] => en
+                    [previewLink] => http://books.google.com.br/books?id=Q9OP0ClTTvIC&hl=&source=gbs_api
+                    [infoLink] => https://play.google.com/store/books/details?id=Q9OP0ClTTvIC&source=gbs_api
+                    [canonicalVolumeLink] => https://play.google.com/store/books/details?id=Q9OP0ClTTvIC
+                )
+
+            [saleInfo] => Array
+                (
+                    [country] => BR
+                    [saleability] => NOT_FOR_SALE
+                    [isEbook] => 
+                )
+
+            [accessInfo] => Array
+                (
+                    [country] => BR
+                    [viewability] => PARTIAL
+                    [embeddable] => 1
+                    [publicDomain] => 
+                    [textToSpeechPermission] => ALLOWED
+                    [epub] => Array
+                        (
+                            [isAvailable] => 
+                        )
+
+                    [pdf] => Array
+                        (
+                            [isAvailable] => 1
+                            [acsTokenLink] => http://books.google.com.br/books/download/PHP_5_For_Dummies-sample-pdf.acsm?id=Q9OP0ClTTvIC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api
+                        )
+
+                    [webReaderLink] => http://play.google.com/books/reader?id=Q9OP0ClTTvIC&hl=&source=gbs_api
+                    [accessViewStatus] => SAMPLE
+                    [quoteSharingAllowed] => 
+                )
+
+        )
+
+)
+
+2025-09-24 12:38:54 - Processando livro - Detalhes: Array
+(
+    [id] => Oj5FDwAAQBAJ
+    [dados] => Array
+        (
+            [kind] => books#volume
+            [id] => Oj5FDwAAQBAJ
+            [etag] => JiOj48cWnMQ
+            [selfLink] => https://www.googleapis.com/books/v1/volumes/Oj5FDwAAQBAJ
+            [volumeInfo] => Array
+                (
+                    [title] => Python para análise de dados
+                    [subtitle] => Tratamento de dados com Pandas, NumPy e IPython
+                    [authors] => Array
+                        (
+                            [0] => Wes McKinney
+                        )
+
+                    [publisher] => Novatec Editora
+                    [description] => Obtenha instruções completas para manipular, processar, limpar e extrair informações de conjuntos de dados em Python. Atualizada para Python 3.6, este guia prático está repleto de casos de estudo práticos que mostram como resolver um amplo conjunto de problemas de análise de dados de forma eficiente. Você conhecerá as versões mais recentes do pandas, da NumPy, do IPython e do Jupyter no processo.<br><br>Escrito por Wes McKinney, criador do projeto Python pandas, este livro contém uma introdução prática e moderna às ferramentas de ciência de dados em Python. É ideal para analistas, para quem Python é uma novidade, e para programadores Python iniciantes nas áreas de ciência de dados e processamento científico. Os arquivos de dados e os materiais relacionados ao livro estão disponíveis no GitHub.<br><br>utilize o shell IPython e o Jupyter Notebook para processamentos exploratórios;<br><br>conheça os recursos básicos e avançados da NumPy (Numerical Python);<br><br>comece a trabalhar com ferramentas de análise de dados da biblioteca pandas;<br><br>utilize ferramentas flexíveis para carregar, limpar, transformar, combinar e reformatar dados;<br><br>crie visualizações informativas com a matplotlib;<br><br>aplique o recurso groupby do pandas para processar e sintetizar conjuntos de dados;<br><br>analise e manipule dados de séries temporais regulares e irregulares;<br><br>aprenda a resolver problemas de análise de dados do mundo real com exemplos completos e detalhados.<p> </p>
+                    [industryIdentifiers] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [type] => ISBN_10
+                                    [identifier] => 8575226479
+                                )
+
+                            [1] => Array
+                                (
+                                    [type] => ISBN_13
+                                    [identifier] => 9788575226476
+                                )
+
+                        )
+
+                    [readingModes] => Array
+                        (
+                            [text] => 
+                            [image] => 1
+                        )
+
+                    [pageCount] => 616
+                    [printedPageCount] => 43
+                    [printType] => BOOK
+                    [categories] => Array
+                        (
+                            [0] => Computers / Programming Languages / Python
+                            [1] => Computers / Data Transmission Systems / General
+                            [2] => Computers / Databases / General
+                            [3] => Technology & Engineering / Data Transmission Systems / General
+                        )
+
+                    [maturityRating] => NOT_MATURE
+                    [allowAnonLogging] => 
+                    [contentVersion] => 1.1.1.0.preview.1
+                    [panelizationSummary] => Array
+                        (
+                            [containsEpubBubbles] => 
+                            [containsImageBubbles] => 
+                        )
+
+                    [imageLinks] => Array
+                        (
+                            [smallThumbnail] => http://books.google.com/books/publisher/content?id=Oj5FDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE70RR8eA2rhgh3ppOKg-YBbfZQNKMJ3UzzvJytRo0tt0FQNf0Y3XHu3zIQiCQumw4zQLv0gOc2iVSCC5TkiDoHlIkrelObPEx1kEI3oVYlY3Jlbliy-4I0iNhKa-9j7tZiLTdO4V&source=gbs_api
+                            [thumbnail] => http://books.google.com/books/publisher/content?id=Oj5FDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72Xb-9EDUPbkX5mBK34RCTrTpFnNljGSnxs5x20uU28aLvLklgVMFX5IVGeLJp52gPmj6_-vIhrmOT1AGQvvoI5DYvP6OpMmWFFD_xk4KAJRYO79Yanp5dw8wMnJKQJrULB4csD&source=gbs_api
+                            [small] => http://books.google.com/books/publisher/content?id=Oj5FDwAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE73AWGW7UuUsHFHU-oQ8celjHDXJGA0Nx6YGr0gneso0fo5MV62ApqmzYHSh1wZNvWqscqPZ-aViPTMQTD4K3fH2Qz2I71lWBhgU9_lpVtn7iX5olviBKF-mH0amZu8MAnc8ALI2&source=gbs_api
+                            [medium] => http://books.google.com/books/publisher/content?id=Oj5FDwAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE733Czqirh68xgvp5VrBV0xgQGHLQ6fN1NKncgktjHIrgYKL8GDSZxdopyXGqs-3x-bDialjsh8wIjMCwmyeaDuDOOzxwHkEjgpaBWb-OpgR0JrfhD-5s98XMdhdN79eTNRd-fqh&source=gbs_api
+                            [large] => http://books.google.com/books/publisher/content?id=Oj5FDwAAQBAJ&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE70cMOuBizydSZbRhvmTqU9jlSOxItI-VmxYEF11XX_U8McjoGdK5VrWlq-vILibKnV766oeOFvev9MjU0tsRvBuoEVcM5ELOdiiebWH4mZwy3pg8a4xju1aGeHKwee-A9x3-iSD&source=gbs_api
+                            [extraLarge] => http://books.google.com/books/publisher/content?id=Oj5FDwAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE70PHlZUXTjmJkbZThhY1F_deGQlhGwyBFXxuvuyyHucwer_cxPIT91w_uEJu3OlHz7SQLhUj1thKgeYrKW3i4XwUDaFn0iVfuPQRv_N_fECs0xEnRtjtth0QfVqUy1ZtRdlyJpZ&source=gbs_api
+                        )
+
+                    [language] => pt-BR
+                    [previewLink] => http://books.google.com.br/books?id=Oj5FDwAAQBAJ&hl=&source=gbs_api
+                    [infoLink] => https://play.google.com/store/books/details?id=Oj5FDwAAQBAJ&source=gbs_api
+                    [canonicalVolumeLink] => https://play.google.com/store/books/details?id=Oj5FDwAAQBAJ
+                )
+
+            [saleInfo] => Array
+                (
+                    [country] => BR
+                    [saleability] => NOT_FOR_SALE
+                    [isEbook] => 
+                )
+
+            [accessInfo] => Array
+                (
+                    [country] => BR
+                    [viewability] => PARTIAL
+                    [embeddable] => 1
+                    [publicDomain] => 
+                    [textToSpeechPermission] => ALLOWED
+                    [epub] => Array
+                        (
+                            [isAvailable] => 
+                        )
+
+                    [pdf] => Array
+                        (
+                            [isAvailable] => 1
+                            [acsTokenLink] => http://books.google.com.br/books/download/Python_para_an%C3%A1lise_de_dados-sample-pdf.acsm?id=Oj5FDwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api
+                        )
+
+                    [webReaderLink] => http://play.google.com/books/reader?id=Oj5FDwAAQBAJ&hl=&source=gbs_api
+                    [accessViewStatus] => SAMPLE
+                    [quoteSharingAllowed] => 
+                )
+
+        )
+
+)
+
+2025-09-24 12:38:58 - Processando livro - Detalhes: Array
+(
+    [id] => JnR9hQA3SncC
+    [dados] => Array
+        (
+            [kind] => books#volume
+            [id] => JnR9hQA3SncC
+            [etag] => vVmNkjg9t6I
+            [selfLink] => https://www.googleapis.com/books/v1/volumes/JnR9hQA3SncC
+            [volumeInfo] => Array
+                (
+                    [title] => Python in a Nutshell
+                    [subtitle] => A Desktop Quick Reference
+                    [authors] => Array
+                        (
+                            [0] => Alex Martelli
+                        )
+
+                    [publisher] => "O'Reilly Media, Inc."
+                    [publishedDate] => 2006-07-14
+                    [description] => <p>This book offers Python programmers one place to look when they needhelp remembering or deciphering the syntax of this open source languageand its many powerful but scantily documented modules. Thiscomprehensive reference guide makes it easy to look up the mostfrequently needed information--not just about the Python languageitself, but also the most frequently used parts of the standard libraryand the most important third-party extensions. </p> <p>Ask any Python aficionado and you'll hear that Python programmers haveit all: an elegant object-oriented language with readable andmaintainable syntax, that allows for easy integration with componentsin C, C++, Java, or C#, and an enormous collection of precoded standardlibrary and third-party extension modules. Moreover, Python is easy tolearn, yet powerful enough to take on the most ambitious programmingchallenges. But what Python programmers used to lack is a concise andclear reference resource, with the appropriate measure of guidance inhow best to use Python's great power. <i>Python in aNutshell</i> fills this need. </p> <p><i>Python in a Nutshell</i>, Second Edition covers morethan the language itself; it also deals with the mostfrequently used parts of the standard library, and the most popular andimportant third party extensions. Revised and expanded forPython 2.5, this book now contains the gory details of Python's newsubprocess module and breaking news about Microsoft's newIronPython project. Our "Nutshell" format fits Python perfectly bypresenting the highlights of the most important modules and functionsin its standard library, which cover over 90% of your practicalprogramming needs. This book includes:</p> <ul><li>A fast-paced tutorial on the syntax of the Python language</li><li>An explanation of object-oriented programming in Python </li><li>Coverage of iterators, generators, exceptions, modules,packages, strings, and regular expressions</li><li>A quick reference for Python's built-in types and functionsand key modules </li><li>Reference material on important third-party extensions,such as Numeric and Tkinter</li><li>Information about extending and embedding Python </li></ul> <p><i>Python in a Nutshell</i> provides a solid,no-nonsense quick reference to information that programmers rely on themost. This book will immediately earn its place in any Pythonprogrammer's library.</p> <p>Praise for the First Edition:<br></p><p>"In a nutshell, <i>Python in a Nutshell</i> serves oneprimary goal: to act as an immediately accessible goal for the Pythonlanguage. True, you can get most of the same core information that ispresented within the covers of this volume online, but this willinvariably be broken into multiple files, and in all likelihood lackingthe examples or the exact syntax description necessary to trulyunderstand a command."<br>--Richard Cobbett, <i>Linux Format</i><br></p><p>"O'Reilly has several good books, of which <i>Python in aNutshell</i> by Alex Martelli is probably the best for giving yousome idea of what Python is about and how to do useful things with it."<br>--Jerry Pournelle, <i>Byte Magazine</i></p>
+                    [industryIdentifiers] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [type] => ISBN_10
+                                    [identifier] => 1449379109
+                                )
+
+                            [1] => Array
+                                (
+                                    [type] => ISBN_13
+                                    [identifier] => 9781449379100
+                                )
+
+                        )
+
+                    [readingModes] => Array
+                        (
+                            [text] => 1
+                            [image] => 1
+                        )
+
+                    [pageCount] => 738
+                    [printedPageCount] => 738
+                    [printType] => BOOK
+                    [categories] => Array
+                        (
+                            [0] => Computers / Programming Languages / JavaScript
+                            [1] => Computers / Software Development & Engineering / General
+                            [2] => Computers / Programming Languages / General
+                            [3] => Computers / Operating Systems / UNIX
+                            [4] => Computers / Programming / Object Oriented
+                            [5] => Computers / General
+                            [6] => Computers / Operating Systems / Linux
+                        )
+
+                    [averageRating] => 3.5
+                    [ratingsCount] => 8
+                    [maturityRating] => NOT_MATURE
+                    [allowAnonLogging] => 1
+                    [contentVersion] => 0.8.6.0.preview.3
+                    [panelizationSummary] => Array
+                        (
+                            [containsEpubBubbles] => 
+                            [containsImageBubbles] => 
+                        )
+
+                    [imageLinks] => Array
+                        (
+                            [smallThumbnail] => http://books.google.com/books/content?id=JnR9hQA3SncC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE733IaloNVthFM9A6qIHF1g_GmMxPzz8tc7Y-wYQmbhILfuT_5qmn0wGrFiaznfc0vHBAXsqmDQ5D2W228RpQzgI7lmm5uPPF6W0ttN1eVVvtlndiW1aykohdWfG3vOii_EaGi1P&source=gbs_api
+                            [thumbnail] => http://books.google.com/books/content?id=JnR9hQA3SncC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70njbB9JB-Pw3wYmFUedAC1pMGp7DFS1-4uaBl-by0OFMTH144v4AJqsVmUgnqKI6KHXvVtD3VZTff3peNu8roojCtaHdCLQsghP2LmAS68DhtuMliPBQy5kElikGgg5FnLGfPO&source=gbs_api
+                            [small] => http://books.google.com/books/content?id=JnR9hQA3SncC&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE72D5GFr-URbxFUk3ImNL543CfIvY8cYhbHjBybQX6fDr9YZD8UdoljNaB4mWUP1GWKN4XSHeHtM6jP9LtRb2Nn1FVdJwt-r66BopubgoL-5vb3YgwS8Fd9ym6fU4YFh2O4Kuw77&source=gbs_api
+                            [medium] => http://books.google.com/books/content?id=JnR9hQA3SncC&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE70RggOv6WQpGRArPGb6kgqzWBKk9V_H3410q4M8w_c8uKKedxtW3Lv-aiyAWgFor4XPMQUOyep8aoI_qjHTjukjFdE83ocPniN5DZSilHRTc2Cc-psMH9Ynk1p67onghZojd9_t&source=gbs_api
+                            [large] => http://books.google.com/books/content?id=JnR9hQA3SncC&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE70QLwrW4AWl7GGbu1JPhjUZ5vVHz2TW_xifTSYNYWfwfQmcSv3e88wjNm-A37k1m-WprK0vvoI1I6CmSkgpQ4l_KpUeRwgr4uafOkEU7fnHdV1oJ9AHw3yq1BViLmQqJpt4EZvQ&source=gbs_api
+                            [extraLarge] => http://books.google.com/books/content?id=JnR9hQA3SncC&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE70bKrBNCFk9wmAm36I6-_bXIF9zE30tGReTfsnXmLjWIn1SyHMsQJ3lbGA9FE8q64nu1WWEF8LJN6knbupy9j3qyKwi4K1v_IODD2lLH1y1Gqlw42Ev87bP8qzHXT5DDmKrvwtY&source=gbs_api
+                        )
+
+                    [language] => en
+                    [previewLink] => http://books.google.com.br/books?id=JnR9hQA3SncC&hl=&source=gbs_api
+                    [infoLink] => https://play.google.com/store/books/details?id=JnR9hQA3SncC&source=gbs_api
+                    [canonicalVolumeLink] => https://play.google.com/store/books/details?id=JnR9hQA3SncC
+                )
+
+            [layerInfo] => Array
+                (
+                    [layers] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [layerId] => geo
+                                    [volumeAnnotationsVersion] => 15
+                                )
+
+                        )
+
+                )
+
+            [saleInfo] => Array
+                (
+                    [country] => BR
+                    [saleability] => NOT_FOR_SALE
+                    [isEbook] => 
+                )
+
+            [accessInfo] => Array
+                (
+                    [country] => BR
+                    [viewability] => PARTIAL
+                    [embeddable] => 1
+                    [publicDomain] => 
+                    [textToSpeechPermission] => ALLOWED
+                    [epub] => Array
+                        (
+                            [isAvailable] => 1
+                        )
+
+                    [pdf] => Array
+                        (
+                            [isAvailable] => 1
+                        )
+
+                    [webReaderLink] => http://play.google.com/books/reader?id=JnR9hQA3SncC&hl=&source=gbs_api
+                    [accessViewStatus] => SAMPLE
+                    [quoteSharingAllowed] => 
+                )
+
+        )
+
+)
+
+2025-09-24 12:39:01 - Processando livro - Detalhes: Array
+(
+    [id] => nEJ-jcYF2fMC
+    [dados] => Array
+        (
+            [kind] => books#volume
+            [id] => nEJ-jcYF2fMC
+            [etag] => a/cuFJu6uSo
+            [selfLink] => https://www.googleapis.com/books/v1/volumes/nEJ-jcYF2fMC
+            [volumeInfo] => Array
+                (
+                    [title] => Learning Python
+                    [authors] => Array
+                        (
+                            [0] => Mark Lutz
+                        )
+
+                    [publisher] => "O'Reilly Media, Inc."
+                    [publishedDate] => 2007-10-22
+                    [description] => <p>Portable, powerful, and a breeze to use, Python is ideal for both standalone programs and scripting applications. With this hands-on book, you can master the fundamentals of the core Python language quickly and efficiently, whether you're new to programming or just new to Python. Once you finish, you will know enough about the language to use it in any application domain you choose.<br><br>Learning Python is based on material from author Mark Lutz's popular training courses, which he's taught over the past decade. Each chapter is a self-contained lesson that helps you thoroughly understand a key component of Python before you continue. Along with plenty of annotated examples, illustrations, and chapter summaries, every chapter also contains <b>Brain Builder</b>, a unique section with practical exercises and review quizzes that let you practice new skills and test your understanding as you go.<br><br> This book covers: </p><ul><li>Types and Operations -- Python's major built-in object types in depth: numbers, lists, dictionaries, and more</li><br><br><li>Statements and Syntax -- the code you type to create and process objects in Python, along with Python's general syntax model</li><br><br><li>Functions -- Python's basic procedural tool for structuring and reusing code</li><br><br><li>Modules -- packages of statements, functions, and other tools organized into larger components</li><br><br><li>Classes and OOP -- Python's optional object-oriented programming tool for structuring code for customization and reuse</li><br><br><li>Exceptions and Tools -- exception handling model and statements, plus a look at development tools for writing larger programs</li> </ul>Learning Python gives you a deep and complete understanding of the language that will help you comprehend any application-level examples of Python that you later encounter. If you're ready to discover what Google and YouTube see in Python, this book is the best way to get started.
+                    [industryIdentifiers] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [type] => ISBN_10
+                                    [identifier] => 0596554494
+                                )
+
+                            [1] => Array
+                                (
+                                    [type] => ISBN_13
+                                    [identifier] => 9780596554491
+                                )
+
+                        )
+
+                    [readingModes] => Array
+                        (
+                            [text] => 1
+                            [image] => 1
+                        )
+
+                    [pageCount] => 752
+                    [printedPageCount] => 749
+                    [printType] => BOOK
+                    [categories] => Array
+                        (
+                            [0] => Computers / Languages / General
+                            [1] => Computers / Languages / JavaScript
+                            [2] => Computers / Software Development & Engineering / General
+                        )
+
+                    [averageRating] => 4
+                    [ratingsCount] => 26
+                    [maturityRating] => NOT_MATURE
+                    [allowAnonLogging] => 1
+                    [contentVersion] => 2.10.9.0.preview.3
+                    [panelizationSummary] => Array
+                        (
+                            [containsEpubBubbles] => 
+                            [containsImageBubbles] => 
+                        )
+
+                    [imageLinks] => Array
+                        (
+                            [smallThumbnail] => http://books.google.com/books/content?id=nEJ-jcYF2fMC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE71k6o_7IfHm1EeuZrn29vX-E7A49SATXFSqNAHJdC9HOib1Qs7E0w9bqCDpOMmTNZ4Z5z4xVSOchmyEhzez9x2p_2mbEwLvd8vY8qSoM2qhVb1obcsdeD2quBQB6PiZzgAAnk_D&source=gbs_api
+                            [thumbnail] => http://books.google.com/books/content?id=nEJ-jcYF2fMC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73mX-YURHEb8WYPnumkzXLxccZwaLpQh3rf10QHwR_ZvCXfFp02DiDXkORcWOmQqvK8cteBRr_dvObc3rgXtjFALobwkbEnzGf7wbU-g3sFa2K7xDho8NvfOFyih1H9DbDamhgH&source=gbs_api
+                            [small] => http://books.google.com/books/content?id=nEJ-jcYF2fMC&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE718VPbrd5OMDiloUMdmU_DxLIYW43NnTNlV-T32VDlodE6QGQ8f6EyR0pkogvnA48AYdAiiBLOSpJGx9WlszeWkdUTDpe83VtVExzAcW9FSd4paLHVNu-4oK15YjnxetHmFcwBg&source=gbs_api
+                            [medium] => http://books.google.com/books/content?id=nEJ-jcYF2fMC&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE72ekbbpAOWflTRw0HynABrolCo9RJcw9ualCkiIk4cFOX_ascVSyGRB-sUrEvBXszEd2-FGvEekVMncwZCJEiIKDuipZ6ZujfsuahlZsUfrpsiRUow6u-fzk4m0UeG0C-kZjzZc&source=gbs_api
+                            [large] => http://books.google.com/books/content?id=nEJ-jcYF2fMC&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE70zRS2Q9_8M438BVnGz9vaFe-0RUIXqCD-LKEPeR8hcqLa66NSpIAdK62SYOuJOYoIpx4mvMfgM0oe6cLEE2ri-TVE4HQoyVGrXgTJSTFWknWwv_TMADoWUqvvGlQ2-4bUybjLT&source=gbs_api
+                            [extraLarge] => http://books.google.com/books/content?id=nEJ-jcYF2fMC&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE71XrXLB6fCx7AwZHjdLVCQO8WqcA0PO3LGFwOtZh8i_-mXSyKglXuY-lhQDb_S2FD8CoFMAofsUUFnLk85vWBO4LH1xRNZAdK7OHLr73413w3QOLR9giR_QCU78mYg9aKw4SXsm&source=gbs_api
+                        )
+
+                    [language] => en
+                    [previewLink] => http://books.google.com.br/books?id=nEJ-jcYF2fMC&hl=&source=gbs_api
+                    [infoLink] => https://play.google.com/store/books/details?id=nEJ-jcYF2fMC&source=gbs_api
+                    [canonicalVolumeLink] => https://play.google.com/store/books/details?id=nEJ-jcYF2fMC
+                )
+
+            [layerInfo] => Array
+                (
+                    [layers] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [layerId] => geo
+                                    [volumeAnnotationsVersion] => 16
+                                )
+
+                        )
+
+                )
+
+            [saleInfo] => Array
+                (
+                    [country] => BR
+                    [saleability] => FOR_SALE
+                    [isEbook] => 1
+                    [listPrice] => Array
+                        (
+                            [amount] => 173.76
+                            [currencyCode] => BRL
+                        )
+
+                    [retailPrice] => Array
+                        (
+                            [amount] => 173.76
+                            [currencyCode] => BRL
+                        )
+
+                    [buyLink] => https://play.google.com/store/books/details?id=nEJ-jcYF2fMC&rdid=book-nEJ-jcYF2fMC&rdot=1&source=gbs_api
+                    [offers] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [finskyOfferType] => 1
+                                    [listPrice] => Array
+                                        (
+                                            [amountInMicros] => 173760000
+                                            [currencyCode] => BRL
+                                        )
+
+                                    [retailPrice] => Array
+                                        (
+                                            [amountInMicros] => 173760000
+                                            [currencyCode] => BRL
+                                        )
+
+                                    [giftable] => 1
+                                )
+
+                        )
+
+                )
+
+            [accessInfo] => Array
+                (
+                    [country] => BR
+                    [viewability] => PARTIAL
+                    [embeddable] => 1
+                    [publicDomain] => 
+                    [textToSpeechPermission] => ALLOWED
+                    [epub] => Array
+                        (
+                            [isAvailable] => 1
+                        )
+
+                    [pdf] => Array
+                        (
+                            [isAvailable] => 1
+                        )
+
+                    [webReaderLink] => http://play.google.com/books/reader?id=nEJ-jcYF2fMC&hl=&source=gbs_api
+                    [accessViewStatus] => SAMPLE
+                    [quoteSharingAllowed] => 
+                )
+
+        )
+
+)
+
+2025-09-24 12:39:05 - Processando livro - Detalhes: Array
+(
+    [id] => c2uCCwAAQBAJ
+    [dados] => Array
+        (
+            [kind] => books#volume
+            [id] => c2uCCwAAQBAJ
+            [etag] => 4WYHSUku1Tk
+            [selfLink] => https://www.googleapis.com/books/v1/volumes/c2uCCwAAQBAJ
+            [volumeInfo] => Array
+                (
+                    [title] => Python
+                    [subtitle] => Escreva seus primeiros programas
+                    [authors] => Array
+                        (
+                            [0] => Felipe Cruz
+                        )
+
+                    [publisher] => Editora Casa do Código
+                    [publishedDate] => 2015-09-11
+                    [description] => Existe um movimento na comunidade de programação que diz que você deve aprender uma nova linguagem por ano. Isso faz com que você estude novos conceitos e práticas, melhorando a forma como você trabalha no dia a dia. Mas qual será a sua próxima linguagem? Python é a principal linguagem de programação utilizada no Google e repleta de funcionalidades interessantes. Neste livro, Felipe Cruz vai introduzi-lo ao Python 3, a versão mais atual, mostrando seu funcionamento, sintaxe, manipulação de arquivos, tratamento de exceções, estruturas de dados, a biblioteca padrão e tudo o que você precisa saber para começar a programar nessa linguagem.
+                    [industryIdentifiers] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [type] => ISBN_10
+                                    [identifier] => 8555190924
+                                )
+
+                            [1] => Array
+                                (
+                                    [type] => ISBN_13
+                                    [identifier] => 9788555190926
+                                )
+
+                        )
+
+                    [readingModes] => Array
+                        (
+                            [text] => 1
+                            [image] => 1
+                        )
+
+                    [pageCount] => 287
+                    [printedPageCount] => 291
+                    [printType] => BOOK
+                    [categories] => Array
+                        (
+                            [0] => Computers / Languages / Python
+                            [1] => Computers / Programming / General
+                        )
+
+                    [maturityRating] => NOT_MATURE
+                    [allowAnonLogging] => 1
+                    [contentVersion] => 0.9.9.0.preview.3
+                    [panelizationSummary] => Array
+                        (
+                            [containsEpubBubbles] => 
+                            [containsImageBubbles] => 
+                        )
+
+                    [imageLinks] => Array
+                        (
+                            [smallThumbnail] => http://books.google.com/books/publisher/content?id=c2uCCwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE72657xsSHcvPlCbrBcwraDLCd3H_7RvzX0KmQ4Ll8T37b20tjv6CUrNtJ5YQ1E8i7R2MvRjLZRU76-xNSHw-3nYaSdhSG682mvK5wHxxBBQWHOHXZSfQsCaFZE-1YV7cTEw_umH&source=gbs_api
+                            [thumbnail] => http://books.google.com/books/publisher/content?id=c2uCCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE71baN9t3QKoEMrWwg9_HuiDOdc1iihuxLn9XiVCNOKZIIGXP3eVKxhAzRLQ2_HW-3-k_j5ASz75ypyIHWog3ZK_-oZSwllaBXa19RHgH3vi_Wf0onF6iXYmeppRJGLyHvAYvjB2&source=gbs_api
+                            [small] => http://books.google.com/books/publisher/content?id=c2uCCwAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE71qZBnz23YGYG1uL16DnM947vJe5Ru4QBqhHAU_S-nxc28c8dSy-36tc-emPVaQZi4M88qN113W3zZvTgZad9mGqc6owOWP52iLHM0XQcreyL8bfPrF9v1Hf3tStlbRYlcaF4Ba&source=gbs_api
+                            [medium] => http://books.google.com/books/publisher/content?id=c2uCCwAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE72TFOLWS9TUT_iRdm_ED4hDFJ170EaKcWUoL93j00l-b7ugU3nAN8m2wdfLTDvxAtGj7_5YBfpvZ790BvSM7eLRoyfr-hcSvwRgfuu1FCdEVGogr6f8_Qtr06XPRtP5T5ZhBKye&source=gbs_api
+                            [large] => http://books.google.com/books/publisher/content?id=c2uCCwAAQBAJ&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE73Zh9N-Rlc8jzD_WDHTjHrvn7_UfpthZF-o40MAJHgvHs85thdT3n_AkZEpqsFityTXYiksk-dzS1VPPRa6sht7uMUNSUmhT9MkQBHaSiV6IuSf85e7oDV6YIDhVHi9tDNZ6HsU&source=gbs_api
+                            [extraLarge] => http://books.google.com/books/publisher/content?id=c2uCCwAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE733254VsIDvPm6IAHgK4bNMnrpYbSt1XGfzoxWylF2C-blrYkEOP8HMDrdtzcd2tky2hdBX39RRWuTRURrJ-mlyB_1IdBpOxCsYTwd2sndOWDpHOMFlf4MvXAVPRIay-uaKJceU&source=gbs_api
+                        )
+
+                    [language] => en
+                    [previewLink] => http://books.google.com.br/books?id=c2uCCwAAQBAJ&hl=&source=gbs_api
+                    [infoLink] => https://play.google.com/store/books/details?id=c2uCCwAAQBAJ&source=gbs_api
+                    [canonicalVolumeLink] => https://play.google.com/store/books/details?id=c2uCCwAAQBAJ
+                )
+
+            [layerInfo] => Array
+                (
+                    [layers] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [layerId] => geo
+                                    [volumeAnnotationsVersion] => 10
+                                )
+
+                        )
+
+                )
+
+            [saleInfo] => Array
+                (
+                    [country] => BR
+                    [saleability] => FOR_SALE
+                    [isEbook] => 1
+                    [listPrice] => Array
+                        (
+                            [amount] => 49.9
+                            [currencyCode] => BRL
+                        )
+
+                    [retailPrice] => Array
+                        (
+                            [amount] => 49.9
+                            [currencyCode] => BRL
+                        )
+
+                    [buyLink] => https://play.google.com/store/books/details?id=c2uCCwAAQBAJ&rdid=book-c2uCCwAAQBAJ&rdot=1&source=gbs_api
+                    [offers] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [finskyOfferType] => 1
+                                    [listPrice] => Array
+                                        (
+                                            [amountInMicros] => 49900000
+                                            [currencyCode] => BRL
+                                        )
+
+                                    [retailPrice] => Array
+                                        (
+                                            [amountInMicros] => 49900000
+                                            [currencyCode] => BRL
+                                        )
+
+                                    [giftable] => 1
+                                )
+
+                        )
+
+                )
+
+            [accessInfo] => Array
+                (
+                    [country] => BR
+                    [viewability] => PARTIAL
+                    [embeddable] => 1
+                    [publicDomain] => 
+                    [textToSpeechPermission] => ALLOWED
+                    [epub] => Array
+                        (
+                            [isAvailable] => 1
+                            [acsTokenLink] => http://books.google.com.br/books/download/Python-sample-epub.acsm?id=c2uCCwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api
+                        )
+
+                    [pdf] => Array
+                        (
+                            [isAvailable] => 1
+                            [acsTokenLink] => http://books.google.com.br/books/download/Python-sample-pdf.acsm?id=c2uCCwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api
+                        )
+
+                    [webReaderLink] => http://play.google.com/books/reader?id=c2uCCwAAQBAJ&hl=&source=gbs_api
+                    [accessViewStatus] => SAMPLE
+                    [quoteSharingAllowed] => 
+                )
+
+        )
+
+)
+
+2025-09-24 12:39:09 - Processando livro - Detalhes: Array
+(
+    [id] => Y7RCCgjmowcC
+    [dados] => Array
+        (
+            [kind] => books#volume
+            [id] => Y7RCCgjmowcC
+            [etag] => L1yI0sLHSWI
+            [selfLink] => https://www.googleapis.com/books/v1/volumes/Y7RCCgjmowcC
+            [volumeInfo] => Array
+                (
+                    [title] => Python for Unix and Linux System Administration
+                    [authors] => Array
+                        (
+                            [0] => Noah Gift
+                            [1] => Jeremy M. Jones
+                        )
+
+                    [publisher] => O'Reilly Germany
+                    [publishedDate] => 2008
+                    [description] => <p>Python is an ideal language for solving problems, especially in Linux and Unix networks. With this pragmatic book, administrators can review various tasks that often occur in the management of these systems, and learn how Python can provide a more efficient and less painful way to handle them.Each chapter in Python for Unix and Linux System Administration presents a particular administrative issue, such as concurrency or data backup, and presents Python solutions through hands-on examples. Once you finish this book, you'll be able to develop your own set of command-line utilities with Python to tackle a wide range of problems. Discover how this language can help you: Read text files and extract informationRun tasks concurrently using the threading and forking optionsGet information from one process to another using network facilitiesCreate clickable GUIs to handle large and complex utilitiesMonitor large clusters of machines by interacting with SNMP programmaticallyMaster the IPython Interactive Python shell to replace or augment Bash, Korn, or Z-ShellIntegrate Cloud Computing into your infrastructure, and learn to write a Google App Engine ApplicationSolve unique data backup challenges with customized scriptsInteract with MySQL, SQLite, Oracle, Postgres, Django ORM, and SQLAlchemy<p>With this book, you'll learn how to package and deploy your Python applications and libraries, and write code that runs equally well on multiple Unix platforms. You'll also learn about several Python-related technologies that will make your life much easier.
+                    [industryIdentifiers] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [type] => ISBN_10
+                                    [identifier] => 0596515820
+                                )
+
+                            [1] => Array
+                                (
+                                    [type] => ISBN_13
+                                    [identifier] => 9780596515829
+                                )
+
+                        )
+
+                    [readingModes] => Array
+                        (
+                            [text] => 
+                            [image] => 1
+                        )
+
+                    [pageCount] => 433
+                    [printedPageCount] => 456
+                    [dimensions] => Array
+                        (
+                            [height] => 24.00 cm
+                            [width] => 17.80 cm
+                            [thickness] => 2.30 cm
+                        )
+
+                    [printType] => BOOK
+                    [categories] => Array
+                        (
+                            [0] => Computers / Networking / General
+                            [1] => Computers / Operating Systems / General
+                            [2] => Computers / Operating Systems / UNIX
+                            [3] => Computers / Operating Systems / Linux
+                            [4] => Computers / Languages / JavaScript
+                            [5] => Computers / Languages / Python
+                            [6] => Computers / Networking / Intranets & Extranets
+                        )
+
+                    [averageRating] => 4.5
+                    [ratingsCount] => 2
+                    [maturityRating] => NOT_MATURE
+                    [allowAnonLogging] => 
+                    [contentVersion] => 0.5.0.0.preview.1
+                    [panelizationSummary] => Array
+                        (
+                            [containsEpubBubbles] => 
+                            [containsImageBubbles] => 
+                        )
+
+                    [imageLinks] => Array
+                        (
+                            [smallThumbnail] => http://books.google.com/books/content?id=Y7RCCgjmowcC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE71BD2f_HkCtxvCkiB6KNLYEjXQRNLr179cxo1mm8j6v9g8Z867xhFrRgee-FdFoSSTleRjvEJIsL48--23D6wIHbAhR0Sy40VWMUU4-8kLIu9-b2SOAMX3xwthmzkKIUWSU3Jj3&source=gbs_api
+                            [thumbnail] => http://books.google.com/books/content?id=Y7RCCgjmowcC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70N_GPCM357juPmHj_iM2Iyfrb1lgfswZyKHnIK-O7d89WcShlGhnv0YKpVuuKvXd1OnsEWAepiv3CvsbMww5EJN5RrBr5UelyssH7U6DYa-PtNCzShYhB0SScK34npXYr9tgTy&source=gbs_api
+                            [small] => http://books.google.com/books/content?id=Y7RCCgjmowcC&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE72vRPUB5XU_2kkzE_JUozqceuC2W7fGgeitvqfFtuZqUv0w5kakw1L0Mve40-5IPoxWJNtlGthGyiVQQCx-bfDVWX9q1qU0Rdz5XLjxuHVh1nqwmtXVhtUva4eymAyD6f8ebWO7&source=gbs_api
+                            [medium] => http://books.google.com/books/content?id=Y7RCCgjmowcC&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE71upPq69AyGzS-TWFQZ2tDar8iCHgSlMNRe-i1kH9CJuGn5VYTR5KNHmeIEQW6_OxRPAR6oESH4Qontyd44zei4QUSVRIkAFdnV9wFOJkJrmTfa83JMLNs7OxlFD1M2xZR6GO_U&source=gbs_api
+                            [large] => http://books.google.com/books/content?id=Y7RCCgjmowcC&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE72cd5Ww7JIE6ZsvlXCeeGtBKAirLYwtu6XQ38z_ym_LfB1hZo51DG1VAP3PUBIH1OrjNLrg3F5bh462AtjK1MviJ2uZLG8ddFForIw20OzKAs9CKLHC163unKTebhzpcJ8omAwp&source=gbs_api
+                            [extraLarge] => http://books.google.com/books/content?id=Y7RCCgjmowcC&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE71kpXyvMwROOzXY2VHHibYwDWRlOgqaFoAQ9CD8fYa6FbllwBI5xywIG_ZVxIFfMjRpzdhg5IBh78_kl-EBUI5U0YqEshdDOSahVlPzqvpkR_h2i93ogX9-XmVg2aMMbpuFZ-ca&source=gbs_api
+                        )
+
+                    [language] => en
+                    [previewLink] => http://books.google.com.br/books?id=Y7RCCgjmowcC&hl=&source=gbs_api
+                    [infoLink] => https://play.google.com/store/books/details?id=Y7RCCgjmowcC&source=gbs_api
+                    [canonicalVolumeLink] => https://play.google.com/store/books/details?id=Y7RCCgjmowcC
+                )
+
+            [saleInfo] => Array
+                (
+                    [country] => BR
+                    [saleability] => NOT_FOR_SALE
+                    [isEbook] => 
+                )
+
+            [accessInfo] => Array
+                (
+                    [country] => BR
+                    [viewability] => PARTIAL
+                    [embeddable] => 1
+                    [publicDomain] => 
+                    [textToSpeechPermission] => ALLOWED
+                    [epub] => Array
+                        (
+                            [isAvailable] => 
+                        )
+
+                    [pdf] => Array
+                        (
+                            [isAvailable] => 1
+                        )
+
+                    [webReaderLink] => http://play.google.com/books/reader?id=Y7RCCgjmowcC&hl=&source=gbs_api
+                    [accessViewStatus] => SAMPLE
+                    [quoteSharingAllowed] => 
+                )
+
+        )
+
+)
+
+2025-09-24 12:39:12 - Processando livro - Detalhes: Array
+(
+    [id] => 754knV_fyf8C
+    [dados] => Array
+        (
+            [kind] => books#volume
+            [id] => 754knV_fyf8C
+            [etag] => iPtMnnls07c
+            [selfLink] => https://www.googleapis.com/books/v1/volumes/754knV_fyf8C
+            [volumeInfo] => Array
+                (
+                    [title] => Python Power!
+                    [subtitle] => The Comprehensive Guide
+                    [authors] => Array
+                        (
+                            [0] => Matthew A. Telles
+                        )
+
+                    [publisher] => Course Technology PTR
+                    [publishedDate] => 2008
+                    [description] => Python, a powerful and flexible general purpose programming language is growing in popularity as more people become interested in programming using open source languages. "Python Power!: The Comprehensive Guide" shows readers how to use Python to run Web sites, write GUI interfaces, control number-crunching code, process large XML data sets, build test suites for C or Java code, and much more. Technical topics are explained clearly and concisely and end-of-chapter projects encourage the reader to program on their own. A detailed table of contents and a complete, well-organized index make this book a great reference tool. All code used in the book will be available for download on the companion website. Benefits: * Written for new and experienced Python users and programmers * Covers topics such as data structures, file handling, exceptions, object-oriented programming, GUI programming, multimedia programming, name spaces, and program planning * Technical topics are explained in clear language and end-of-chapter projects encourage readers to program on their own * A detailed table of contents and a complete index make specific topics easy to find * All code used in the book will be available on the companion website
+                    [industryIdentifiers] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [type] => ISBN_10
+                                    [identifier] => 1598631586
+                                )
+
+                            [1] => Array
+                                (
+                                    [type] => ISBN_13
+                                    [identifier] => 9781598631586
+                                )
+
+                        )
+
+                    [readingModes] => Array
+                        (
+                            [text] => 
+                            [image] => 1
+                        )
+
+                    [pageCount] => 508
+                    [printedPageCount] => 532
+                    [dimensions] => Array
+                        (
+                            [height] => 24.00 cm
+                            [width] => 18.80 cm
+                            [thickness] => 3.60 cm
+                        )
+
+                    [printType] => BOOK
+                    [categories] => Array
+                        (
+                            [0] => Computers / General
+                            [1] => Computers / Programming / General
+                            [2] => Computers / Languages / General
+                            [3] => COMPUTERS / Programming Languages / Pascal
+                            [4] => Computers / Programming / Object Oriented
+                            [5] => Computers / Languages / Python
+                        )
+
+                    [averageRating] => 3.5
+                    [ratingsCount] => 2
+                    [maturityRating] => NOT_MATURE
+                    [allowAnonLogging] => 
+                    [contentVersion] => 0.5.5.0.preview.1
+                    [panelizationSummary] => Array
+                        (
+                            [containsEpubBubbles] => 
+                            [containsImageBubbles] => 
+                        )
+
+                    [imageLinks] => Array
+                        (
+                            [smallThumbnail] => http://books.google.com/books/content?id=754knV_fyf8C&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE70BnS1GlO2CjGtvefmRL7fsW2dowyJ9IW4L_k4JaQrxPexXTnpNBIHxgs7qYVWUfBxpd97Jwsu02xWNn5H_DoTgQbtOgXxOjbnZa0LzxmHwbUgm3nnhGaJwIsufS18BF2Lk28Jb&source=gbs_api
+                            [thumbnail] => http://books.google.com/books/content?id=754knV_fyf8C&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE723g0s1MKUJLU7afGD6rW3gbmr2VG4-GFj_4TnodcTEKmsMQWRlfrUQwY5ulVJ_8bfJXp5YHtRKYvnOZ6M2z5od5e0sY3tTllU7AnAt3g2_5PQcIV2oUDXXF_OxhQdDRFewxpC-&source=gbs_api
+                            [small] => http://books.google.com/books/content?id=754knV_fyf8C&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE71yYnvvVNW9HIbM-ro5ph80mYMjZx6UBNhyjipM6aqmhoRzzb9KScpqXw4mH8qCjQmdVMv0PKj0bKS6pIkoaq25Jg8HjWuzI1jQjkPHgdyQcvFe3MSgcfHU34hgnQj9OsLHXa9I&source=gbs_api
+                            [medium] => http://books.google.com/books/content?id=754knV_fyf8C&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE73kiiG62SXwTBJOVCBQoP4VwQVoKgPwZcO6NTXummUQ9YHEuZQv3EYvmnx7IRrgpextSb7TW889KDvkfuO21eP-9hsohePACBXKkGWaQqnCYI0Cw2Aw9NvF0z1b8kB1e6vQbZdI&source=gbs_api
+                            [large] => http://books.google.com/books/content?id=754knV_fyf8C&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE712f8e_tUeIrcBO_dIOQjTlopcTCvSuBAvVOlkCqtq6Dx5xEliboLqGyyWrlB99cJeIyVorR8-D_Xs_q9NoQKr1Dmvz1sC6Mtf_8tiXA5tqxh07PPFoUOf52Hq_7Vz2KX1Nieu2&source=gbs_api
+                            [extraLarge] => http://books.google.com/books/content?id=754knV_fyf8C&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE726--8wlDpUOzkehIEy8iXha0Qr8al2xkBxEwV73ePHNP1THK0xyoBs7wlUjhjWWpUr7vSL_OnD1iN5JiJ1nssSu5fL_r1gEMPvwIktzx2Dixpx5FybvDrHjMhmWEpbAegPYbut&source=gbs_api
+                        )
+
+                    [language] => en
+                    [previewLink] => http://books.google.com.br/books?id=754knV_fyf8C&hl=&source=gbs_api
+                    [infoLink] => https://play.google.com/store/books/details?id=754knV_fyf8C&source=gbs_api
+                    [canonicalVolumeLink] => https://play.google.com/store/books/details?id=754knV_fyf8C
+                )
+
+            [saleInfo] => Array
+                (
+                    [country] => BR
+                    [saleability] => NOT_FOR_SALE
+                    [isEbook] => 
+                )
+
+            [accessInfo] => Array
+                (
+                    [country] => BR
+                    [viewability] => PARTIAL
+                    [embeddable] => 1
+                    [publicDomain] => 
+                    [textToSpeechPermission] => ALLOWED
+                    [epub] => Array
+                        (
+                            [isAvailable] => 
+                        )
+
+                    [pdf] => Array
+                        (
+                            [isAvailable] => 1
+                            [acsTokenLink] => http://books.google.com.br/books/download/Python_Power-sample-pdf.acsm?id=754knV_fyf8C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api
+                        )
+
+                    [webReaderLink] => http://play.google.com/books/reader?id=754knV_fyf8C&hl=&source=gbs_api
+                    [accessViewStatus] => SAMPLE
+                    [quoteSharingAllowed] => 
+                )
+
+        )
+
+)
+
+2025-09-24 12:39:15 - Processando livro - Detalhes: Array
+(
+    [id] => HMvf12TnJQIC
+    [dados] => Array
+        (
+            [kind] => books#volume
+            [id] => HMvf12TnJQIC
+            [etag] => ONsxW9CH0B0
+            [selfLink] => https://www.googleapis.com/books/v1/volumes/HMvf12TnJQIC
+            [volumeInfo] => Array
+                (
+                    [title] => Beginning Python
+                    [subtitle] => From Novice to Professional
+                    [authors] => Array
+                        (
+                            [0] => Magnus Lie Hetland
+                        )
+
+                    [publisher] => Apress
+                    [publishedDate] => 2006-11-07
+                    [description] => <p><i>Beginning Python: From Novice to Professional</i> is the most comprehensive book on the Python ever written. Based on <i>Practical Python</i>, this newly-revised book is both an introduction and practical reference for a swath of Python-related programming topics, including addressing language internals, database integration, network programming, and web services. Advanced topics, such as extending Python and packaging/distributing Python applications, are also covered.</p> <p>Ten different projects illustrate the concepts introduced in the book. You will learn how to create a P2P file-sharing application and a web-based bulletin board, and how to remotely edit web-based documents and create games. Author Magnus Lie Hetland is an authority on Python and previously authored <i>Practical Python</i>. He also authored the popular online guide, Instant Python Hacking, on which both books are based.</p>
+                    [industryIdentifiers] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [type] => ISBN_10
+                                    [identifier] => 1430200723
+                                )
+
+                            [1] => Array
+                                (
+                                    [type] => ISBN_13
+                                    [identifier] => 9781430200727
+                                )
+
+                        )
+
+                    [readingModes] => Array
+                        (
+                            [text] => 
+                            [image] => 1
+                        )
+
+                    [pageCount] => 640
+                    [printedPageCount] => 615
+                    [dimensions] => Array
+                        (
+                            [height] => 24.00 cm
+                        )
+
+                    [printType] => BOOK
+                    [categories] => Array
+                        (
+                            [0] => Computers / Software Development & Engineering / General
+                            [1] => Computers / Information Technology
+                        )
+
+                    [averageRating] => 3.5
+                    [ratingsCount] => 8
+                    [maturityRating] => NOT_MATURE
+                    [allowAnonLogging] => 1
+                    [contentVersion] => 3.5.3.0.preview.1
+                    [panelizationSummary] => Array
+                        (
+                            [containsEpubBubbles] => 
+                            [containsImageBubbles] => 
+                        )
+
+                    [imageLinks] => Array
+                        (
+                            [smallThumbnail] => http://books.google.com/books/content?id=HMvf12TnJQIC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE71SK7YDr-TQS_X3JDhpC6Pt0SRFCnkuuHDxHBu2Xnz-zKv8XQ53GoFu0BfNQWtkjgLf7Vwy9a5KWzvhyf4bMMS2FC-Cvg_o59eRaKBcc4oxYI88ERBNoWZdJsFQ69ZWlDchjw3W&source=gbs_api
+                            [thumbnail] => http://books.google.com/books/content?id=HMvf12TnJQIC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE71yE8My1aXXCLuh_Ix-YRE3yruCetzb-XAc4NTcUmbC6chSthu5SQNClK160lDmbmjmYt32iRgEpaj1XpQfZyDqstbptxa1u81YSpukzVSdlSa9cITlJKYQ4LqrJ0YTH3C91a3e&source=gbs_api
+                            [small] => http://books.google.com/books/content?id=HMvf12TnJQIC&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE71No3eibeKCQZ5PfA0KKcn4OeEtXzdoWgLJlTI7F86401WSvfX4zjJul6JWp1-RDoBtk8TZtZpB783IVSZeOZT8kgvW7tWbL3ypkI-6F9gHcvYrtyy-JhX4HOQ2vA06f2scXsLI&source=gbs_api
+                            [medium] => http://books.google.com/books/content?id=HMvf12TnJQIC&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE71-kaIdTYs7vYuKdpy_mAYJNrBNaFOwxbrclx5kxRuj-32P0T-lf4zVl8ZTeSWBtH_PA1dBwAsL--4Uqwq-pSEXyVsohumED_bXp3g5wdPfOG2omJC65PvT3uy-I33urraTvoak&source=gbs_api
+                            [large] => http://books.google.com/books/content?id=HMvf12TnJQIC&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE71XvlQjEO3Z5XRRVcRzs2vIhFeruO8X6eSsQQBUauSQLHHeg-VFr5n8qEj_h1ZURWFAgei7LdeWAM8ZpiOBu2GeddX--Uj_jkSiWuPsviWiUovVCe7MtSqOFy9tRF3_PNk-mMC0&source=gbs_api
+                            [extraLarge] => http://books.google.com/books/content?id=HMvf12TnJQIC&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE71f6hX0jTJGlkI5K37IkMDG9FGYi92g9BuzMIiXFV8fNqwCUsEwT2vYp7xNKH8G9XADIe2UkP2cf41gW8Zv9L-BORGKzElGpTggsKAe4ZsvOVw8J7QWBwKjWUnpBh8F4ebvKaSh&source=gbs_api
+                        )
+
+                    [language] => en
+                    [previewLink] => http://books.google.com.br/books?id=HMvf12TnJQIC&hl=&source=gbs_api
+                    [infoLink] => https://play.google.com/store/books/details?id=HMvf12TnJQIC&source=gbs_api
+                    [canonicalVolumeLink] => https://play.google.com/store/books/details?id=HMvf12TnJQIC
+                )
+
+            [saleInfo] => Array
+                (
+                    [country] => BR
+                    [saleability] => FOR_SALE
+                    [isEbook] => 1
+                    [listPrice] => Array
+                        (
+                            [amount] => 223.95
+                            [currencyCode] => BRL
+                        )
+
+                    [retailPrice] => Array
+                        (
+                            [amount] => 223.95
+                            [currencyCode] => BRL
+                        )
+
+                    [buyLink] => https://play.google.com/store/books/details?id=HMvf12TnJQIC&rdid=book-HMvf12TnJQIC&rdot=1&source=gbs_api
+                    [offers] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [finskyOfferType] => 1
+                                    [listPrice] => Array
+                                        (
+                                            [amountInMicros] => 223950000
+                                            [currencyCode] => BRL
+                                        )
+
+                                    [retailPrice] => Array
+                                        (
+                                            [amountInMicros] => 223950000
+                                            [currencyCode] => BRL
+                                        )
+
+                                    [giftable] => 1
+                                )
+
+                        )
+
+                )
+
+            [accessInfo] => Array
+                (
+                    [country] => BR
+                    [viewability] => PARTIAL
+                    [embeddable] => 1
+                    [publicDomain] => 
+                    [textToSpeechPermission] => ALLOWED
+                    [epub] => Array
+                        (
+                            [isAvailable] => 
+                        )
+
+                    [pdf] => Array
+                        (
+                            [isAvailable] => 1
+                            [acsTokenLink] => http://books.google.com.br/books/download/Beginning_Python-sample-pdf.acsm?id=HMvf12TnJQIC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api
+                        )
+
+                    [webReaderLink] => http://play.google.com/books/reader?id=HMvf12TnJQIC&hl=&source=gbs_api
+                    [accessViewStatus] => SAMPLE
+                    [quoteSharingAllowed] => 
+                )
+
+        )
+
+)
+
+2025-09-24 12:39:17 - Processando livro - Detalhes: Array
+(
+    [id] => q8W3WQbNWmkC
+    [dados] => Array
+        (
+            [kind] => books#volume
+            [id] => q8W3WQbNWmkC
+            [etag] => axE3Ospkh9k
+            [selfLink] => https://www.googleapis.com/books/v1/volumes/q8W3WQbNWmkC
+            [volumeInfo] => Array
+                (
+                    [title] => Programming Python
+                    [subtitle] => Powerful Object-Oriented Programming
+                    [authors] => Array
+                        (
+                            [0] => Mark Lutz
+                        )
+
+                    [publisher] => "O'Reilly Media, Inc."
+                    [publishedDate] => 2010-12-14
+                    [description] => <p>If you've mastered Python's fundamentals, you're ready to start using it to get real work done. <i>Programming Python</i> will show you how, with in-depth tutorials on the language's primary application domains: system administration, GUIs, and the Web. You'll also explore how Python is used in databases, networking, front-end scripting layers, text processing, and more. This book focuses on commonly used tools and libraries to give you a comprehensive understanding of Python’s many roles in practical, real-world programming.</p><p>You'll learn language syntax and programming techniques in a clear and concise manner, with lots of examples that illustrate both correct usage and common idioms. Completely updated for version 3.x, <i>Programming Python</i> also delves into the language as a software development tool, with many code examples scaled specifically for that purpose.</p><p>Topics include:</p><ul><li><b>Quick Python tour:</b> Build a simple demo that includes data representation, object-oriented programming, object persistence, GUIs, and website basics</li><li><b>System programming:</b> Explore system interface tools and techniques for command-line scripting, processing files and folders, running programs in parallel, and more</li><li><b>GUI programming:</b> Learn to use Python’s tkinter widget library</li><li><b>Internet programming:</b> Access client-side network protocols and email tools, use CGI scripts, and learn website implementation techniques</li><li><b>More ways to apply Python:</b> Implement data structures, parse text-based information, interface with databases, and extend and embed Python</li></ul>
+                    [industryIdentifiers] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [type] => ISBN_10
+                                    [identifier] => 1449302750
+                                )
+
+                            [1] => Array
+                                (
+                                    [type] => ISBN_13
+                                    [identifier] => 9781449302757
+                                )
+
+                        )
+
+                    [readingModes] => Array
+                        (
+                            [text] => 1
+                            [image] => 1
+                        )
+
+                    [pageCount] => 1632
+                    [printedPageCount] => 1630
+                    [printType] => BOOK
+                    [categories] => Array
+                        (
+                            [0] => Computers / Languages / Python
+                            [1] => Computers / Programming / General
+                            [2] => Computers / Programming / Object Oriented
+                            [3] => Computers / Programming / Open Source
+                        )
+
+                    [averageRating] => 3
+                    [ratingsCount] => 2
+                    [maturityRating] => NOT_MATURE
+                    [allowAnonLogging] => 1
+                    [contentVersion] => 0.9.9.0.preview.3
+                    [panelizationSummary] => Array
+                        (
+                            [containsEpubBubbles] => 
+                            [containsImageBubbles] => 
+                        )
+
+                    [imageLinks] => Array
+                        (
+                            [smallThumbnail] => http://books.google.com/books/content?id=q8W3WQbNWmkC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE73ytR1i3e4ZZvpmJec4QeQsTjZGDH4ulglWzWt78sTcmq9nFy5Rb5_1QmI26GHt8-iGMTP9ZCHn0q9vRIU0CGwJD_MPE3PpqQWUTxr2rai8mi7iSwGKIptzBmBKHxfur8Jm7ILx&source=gbs_api
+                            [thumbnail] => http://books.google.com/books/content?id=q8W3WQbNWmkC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73QCwEtaQ9uyHMHXk5ywz1NGSmWSTViHmOGd7ccNNlrRp03rvZBzmNSXjHVErRGaovd2zAFGQf-clzlgqwZ2jEFu4QeTIK47QaSwAqpOZrxnmc_ecoC2Qu6ZiKnbFxTgTxPAotN&source=gbs_api
+                            [small] => http://books.google.com/books/content?id=q8W3WQbNWmkC&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE73M8bBLCAq8RiKTvFK9Ast6PIHAbBj6ngkM4OZAKYPdzoAF69Vqc9nH4IrQD_Z1HMam0qRPqbutBquh3CR4jduopVZX8DfawaJZMV35qh3_31YPItKuhJUdfbA-TlFEnHCphJoL&source=gbs_api
+                            [medium] => http://books.google.com/books/content?id=q8W3WQbNWmkC&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE70KEpOH20DWa1M_kpDTrV4Ur_luVioSFAPyMsR5tJ78e11BLyYd8dgMGlmMMKji0BIjnkdghXDi0wjvvsRKRPw_RmlKx-R3nPlQPuww1xZV9kv_jfIja0j2eTFfHkcge6CvU8ed&source=gbs_api
+                            [large] => http://books.google.com/books/content?id=q8W3WQbNWmkC&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE734eoe7P8BBypYKqtkdVG-TB60WYTH7quCaVxH0n8JuJuPyj5kGf5FBqOHkYrRnrLEh0-pXERHpgOXnbSNYXZKfei28HjGIVvPWZuBXs64gvHmHssWGmvXOvlt6nxNtgqYgizrO&source=gbs_api
+                            [extraLarge] => http://books.google.com/books/content?id=q8W3WQbNWmkC&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE71TaT_W554iCtvN7JH5x5gzpMnbcXUVMSb0Bt0wwqNsF_MKA9X30vDtDuuVzJgclCxOT6RE8k64czjXQPGveH1CTcdJH8AcDwkLu6HWIN68_T2UmMDyovhJRjDAIaveMK5hNsjZ&source=gbs_api
+                        )
+
+                    [language] => en
+                    [previewLink] => http://books.google.com.br/books?id=q8W3WQbNWmkC&hl=&source=gbs_api
+                    [infoLink] => https://play.google.com/store/books/details?id=q8W3WQbNWmkC&source=gbs_api
+                    [canonicalVolumeLink] => https://play.google.com/store/books/details?id=q8W3WQbNWmkC
+                )
+
+            [layerInfo] => Array
+                (
+                    [layers] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [layerId] => geo
+                                    [volumeAnnotationsVersion] => 17
+                                )
+
+                        )
+
+                )
+
+            [saleInfo] => Array
+                (
+                    [country] => BR
+                    [saleability] => FOR_SALE
+                    [isEbook] => 1
+                    [listPrice] => Array
+                        (
+                            [amount] => 125.99
+                            [currencyCode] => BRL
+                        )
+
+                    [retailPrice] => Array
+                        (
+                            [amount] => 125.99
+                            [currencyCode] => BRL
+                        )
+
+                    [buyLink] => https://play.google.com/store/books/details?id=q8W3WQbNWmkC&rdid=book-q8W3WQbNWmkC&rdot=1&source=gbs_api
+                    [offers] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [finskyOfferType] => 1
+                                    [listPrice] => Array
+                                        (
+                                            [amountInMicros] => 125990000
+                                            [currencyCode] => BRL
+                                        )
+
+                                    [retailPrice] => Array
+                                        (
+                                            [amountInMicros] => 125990000
+                                            [currencyCode] => BRL
+                                        )
+
+                                    [giftable] => 1
+                                )
+
+                        )
+
+                )
+
+            [accessInfo] => Array
+                (
+                    [country] => BR
+                    [viewability] => PARTIAL
+                    [embeddable] => 1
+                    [publicDomain] => 
+                    [textToSpeechPermission] => ALLOWED
+                    [epub] => Array
+                        (
+                            [isAvailable] => 1
+                        )
+
+                    [pdf] => Array
+                        (
+                            [isAvailable] => 1
+                        )
+
+                    [webReaderLink] => http://play.google.com/books/reader?id=q8W3WQbNWmkC&hl=&source=gbs_api
+                    [accessViewStatus] => SAMPLE
+                    [quoteSharingAllowed] => 
+                )
+
+        )
+
+)
+
+2025-09-24 12:39:19 - Processando livro - Detalhes: Array
+(
+    [id] => yhfdQgq8JF4C
+    [dados] => Array
+        (
+            [kind] => books#volume
+            [id] => yhfdQgq8JF4C
+            [etag] => VA5obAWqspg
+            [selfLink] => https://www.googleapis.com/books/v1/volumes/yhfdQgq8JF4C
+            [volumeInfo] => Array
+                (
+                    [title] => Python Cookbook
+                    [authors] => Array
+                        (
+                            [0] => Alex Martelli
+                            [1] => David Ascher
+                        )
+
+                    [publisher] => "O'Reilly Media, Inc."
+                    [publishedDate] => 2002
+                    [description] => <p>The<i>Python Cookbook</i>is a collection of problems, solutions, and practical examples for Python programmers, written by Python programmers. Over the past year, members of the Python community have contributed material to an online repository of Python recipes hosted by ActiveState. This book contains the best of those recipes, accompanied by overviews and background material by key Python figures.</p> <p>The recipes in the<i>Python Cookbook</i>range from simple tasks, such as working with dictionaries and list comprehensions, to entire modules that demonstrate templating systems and network monitoring. This book contains over 200 recipes on the following topics:</p> <ul> <li>Searching and sorting</li> <li>Manipulating text</li> <li>Working with files and the filesystem</li> <li>Object-oriented programming</li> <li>Dealing with threads and processes</li> <li>System administration</li> <li>Interacting with databases</li> <li>Creating user interfaces</li> <li>Network and web programming</li> <li>Processing XML</li> <li>Distributed programming</li> <li>Debugging and testing</li> <li>Extending Python</li> </ul> <p>This book is a treasure trove of useful code for all Python programmers, from novices to advanced practitioners, with contributions from such Python luminaries as Guido Van Rossum, David Ascher, Tim Peters, Paul Prescod, Mark Hammond, and Alex Martelli, as well as over 100 other Python programmers. The recipes highlight Python best practices and can be used directly in day-to-day programming tasks, as a source of ideas, or as a way to learn more about Python.</p> <p>The recipes in the<i>Python Cookbook</i>were edited by David Ascher, who is on the board of the Python Software Foundation and is the co-author of<i>Learning Python,</i>and Alex Martelli, who is known for his numerous and exhaustive postings on the Python mailing list. The book contains a foreword by Guido van Rossum, the creator of Python.</p>
+                    [industryIdentifiers] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [type] => ISBN_10
+                                    [identifier] => 0596001673
+                                )
+
+                            [1] => Array
+                                (
+                                    [type] => ISBN_13
+                                    [identifier] => 9780596001674
+                                )
+
+                        )
+
+                    [readingModes] => Array
+                        (
+                            [text] => 
+                            [image] => 1
+                        )
+
+                    [pageCount] => 574
+                    [printedPageCount] => 612
+                    [dimensions] => Array
+                        (
+                            [height] => 24.00 cm
+                            [width] => 17.80 cm
+                            [thickness] => 2.80 cm
+                        )
+
+                    [printType] => BOOK
+                    [categories] => Array
+                        (
+                            [0] => Computers / General
+                            [1] => Computers / Computer Science
+                            [2] => Computers / Languages / General
+                            [3] => Computers / Programming / Object Oriented
+                            [4] => Computers / Languages / Python
+                        )
+
+                    [averageRating] => 4
+                    [ratingsCount] => 12
+                    [maturityRating] => NOT_MATURE
+                    [allowAnonLogging] => 
+                    [contentVersion] => 4.4.5.0.preview.1
+                    [panelizationSummary] => Array
+                        (
+                            [containsEpubBubbles] => 
+                            [containsImageBubbles] => 
+                        )
+
+                    [imageLinks] => Array
+                        (
+                            [smallThumbnail] => http://books.google.com/books/content?id=yhfdQgq8JF4C&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE71Tmx0ZMugVJ7glfEJnOmL3Kask7_3vsEpkallwG6rgcrfnZIEFdpy1djKppvkJk9xoDfrc0GCsoGdSKx9eM1z_voTYTygDL5_92XXnyktXdxTlcLej0ct64DNeCUfHxhkwDwl6&source=gbs_api
+                            [thumbnail] => http://books.google.com/books/content?id=yhfdQgq8JF4C&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73u_9LSGbFErAKjYnVTejpDLAKyMZ_yq47tf6wwD76Gg8L3LFvMNjc7fLYjouvZmmxb0dYvzk9LJ9tdvpht_OqyEzobJN102bZgAk0m0VSonuMmadt-sgfs9GWvaoMmLBBd_-W7&source=gbs_api
+                            [small] => http://books.google.com/books/content?id=yhfdQgq8JF4C&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE70bRofeLfhfcuwfc0YiJMysDa2NEEz0k5Ka-qcTXTUAzcrunnmB5OaxWlaqZr2JdlxKfjUnzPR9-4lBuoVlEF5JESI_DfVwgf7tNzYucBphPEbXVSGJaIyrkGhVw1T6E6IH1qud&source=gbs_api
+                            [medium] => http://books.google.com/books/content?id=yhfdQgq8JF4C&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE71Yltqh20b3iTv15BMsuDVBSfng_ec7Tf2PojWfd612wNE3R9nruLyAX1gc8bmd4WSGPJA_EpfVpvM8AUs5cdomFMlzlCkVmpGBYNsqJuVRj_oHC3EUiMsn6HfOqGSbUUEVyTSF&source=gbs_api
+                            [large] => http://books.google.com/books/content?id=yhfdQgq8JF4C&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE70XJuZJ7e_FOmyFP9dKiUQM9n6zlisayfl_PIKryn3IPbwxgTp5jLmn98tz34ESHaY_z3Hm2pl2SIikf1RECH5RYub-c_p465nh2PCuINZLHX1elLG1VO2looXcAkVJ0FUon8X4&source=gbs_api
+                            [extraLarge] => http://books.google.com/books/content?id=yhfdQgq8JF4C&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE73C-2YGycUVFjvSFu6r8d5bFKLduBZRZqLRZDRbkHw-NKpF5kGAuR5YCuRWheQP99jh0C7hcqwSSH9cs_imiAgt6Fh1LO1gH42iON7nuAYjY0j-2ldrXDfc2uSCt1c4DWPGREjs&source=gbs_api
+                        )
+
+                    [language] => en
+                    [previewLink] => http://books.google.com.br/books?id=yhfdQgq8JF4C&hl=&source=gbs_api
+                    [infoLink] => https://play.google.com/store/books/details?id=yhfdQgq8JF4C&source=gbs_api
+                    [canonicalVolumeLink] => https://play.google.com/store/books/details?id=yhfdQgq8JF4C
+                )
+
+            [saleInfo] => Array
+                (
+                    [country] => BR
+                    [saleability] => NOT_FOR_SALE
+                    [isEbook] => 
+                )
+
+            [accessInfo] => Array
+                (
+                    [country] => BR
+                    [viewability] => PARTIAL
+                    [embeddable] => 1
+                    [publicDomain] => 
+                    [textToSpeechPermission] => ALLOWED
+                    [epub] => Array
+                        (
+                            [isAvailable] => 
+                        )
+
+                    [pdf] => Array
+                        (
+                            [isAvailable] => 1
+                        )
+
+                    [webReaderLink] => http://play.google.com/books/reader?id=yhfdQgq8JF4C&hl=&source=gbs_api
+                    [accessViewStatus] => SAMPLE
+                    [quoteSharingAllowed] => 
+                )
+
+        )
+
+)
+
+2025-09-24 12:39:22 - Processando livro - Detalhes: Array
+(
+    [id] => carqdIdfVlYC
+    [dados] => Array
+        (
+            [kind] => books#volume
+            [id] => carqdIdfVlYC
+            [etag] => TSS1XJIEZOI
+            [selfLink] => https://www.googleapis.com/books/v1/volumes/carqdIdfVlYC
+            [volumeInfo] => Array
+                (
+                    [title] => Python
+                    [authors] => Array
+                        (
+                            [0] => Chris Fehily
+                        )
+
+                    [publisher] => Peachpit Press
+                    [publishedDate] => 2002
+                    [description] => <p>Named after the Monty Python comedy troupe, Python is an interpreted, open-source, object-oriented programming language. It's also free and runs portably on Windows, Mac OS, Unix, and other operating systems. Python can be used for all manner of programming tasks, from CGI scripts to full-fledged applications. It is gaining popularity among programmers in part because it is easier to read (and hence, debug) than most other programming languages, and it's generally simpler to install, learn, and use. Its line structure forces consistent indentation. Its syntax and semantics make it suitable for simple scripts and large programs. Its flexible data structures and dynamic typing allow you to get a lot done in a few lines. To learn it, you'll need is some basic programming experience and a copy of Python: Visual QuickStart Guide.</p> <p>In patented Visual QuickStart Guide fashion, the book doesn't just tell you how to use Python to develop applications, it shows you, breaking Python into easy-to-digest, step-by-step tasks and providing example code. <b>Python: Visual QuickStart Guide</b> emphasizes the core language and libraries, which are the building blocks for programs. Author Chris Fehily starts with the basics - expressions, statements, numbers, strings - then moves on to lists, dictionaries, functions, and modules before wrapping things up with straightforward discussions of exceptions and classes. Some additional topics covered include: - Object-oriented programming- Working in multiple operating systems- Structuring large programs- Comparing Python to C, Perl, and Java- Handling errors gracefully.</p> <p>
+                    [industryIdentifiers] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [type] => ISBN_10
+                                    [identifier] => 0201748843
+                                )
+
+                            [1] => Array
+                                (
+                                    [type] => ISBN_13
+                                    [identifier] => 9780201748840
+                                )
+
+                        )
+
+                    [readingModes] => Array
+                        (
+                            [text] => 
+                            [image] => 1
+                        )
+
+                    [pageCount] => 410
+                    [printedPageCount] => 444
+                    [dimensions] => Array
+                        (
+                            [height] => 23.00 cm
+                            [width] => 23.00 cm
+                            [thickness] => 22.90 cm
+                        )
+
+                    [printType] => BOOK
+                    [categories] => Array
+                        (
+                            [0] => Computers / Programming / General
+                            [1] => Computers / Languages / General
+                            [2] => Computers / Languages / Python
+                            [3] => Computers / Internet / Application Development
+                            [4] => Computers / Internet / Web Programming
+                            [5] => Computers / Software Development & Engineering / General
+                        )
+
+                    [averageRating] => 3
+                    [ratingsCount] => 2
+                    [maturityRating] => NOT_MATURE
+                    [allowAnonLogging] => 
+                    [contentVersion] => 3.5.6.0.preview.1
+                    [panelizationSummary] => Array
+                        (
+                            [containsEpubBubbles] => 
+                            [containsImageBubbles] => 
+                        )
+
+                    [imageLinks] => Array
+                        (
+                            [smallThumbnail] => http://books.google.com/books/content?id=carqdIdfVlYC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE73LspzXPymVfNMBfrX4QllXw7-cr1dxAebX-bo4TjxYWTklFfPj7FF1KgyYszYUwTB1p1Ju2tkCte0L-5a4Kunf3qGQBjy6P_gKQGHUyIh2RElulLDQvBB93k2ryN99qCxjuTmV&source=gbs_api
+                            [thumbnail] => http://books.google.com/books/content?id=carqdIdfVlYC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE71Calyev0mgAOjc6s3n9eWXdUI3UM-QvIy7c_VuGOm-u_8N-gpmIdYIjJlzSYSHDX9cdnk2_BeGV-w7ArTTP1y33JlQdurwS0uGTiNjnWfINX3CYKY7pxTmm8psj5CFAWNYKyC0&source=gbs_api
+                            [small] => http://books.google.com/books/content?id=carqdIdfVlYC&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE7144GTPBCD3eRD0NDMKsOEfrdbnJ0OuEUAKgyW02U5yfF0vQpKImIBstqKu8stP6Cazvd0-8PKTO2SbrKTn6v_qpWTuAHDVsRwW6QZi8Z1rijBuikbTfsmEKYnlqaxxH4DKWs6_&source=gbs_api
+                            [medium] => http://books.google.com/books/content?id=carqdIdfVlYC&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE73GPe1mtLTpusliirWQIuF_MVxGqJZZ2_R27Jue7j4DizUZ__od67R_ssn7AhbpFcrJjizL29gYLrlpdorPa0G4NAxxB4BMOZimRbwiHuOAnJ6WdtSz4V8_ldLfgUNanAhbzIr4&source=gbs_api
+                            [large] => http://books.google.com/books/content?id=carqdIdfVlYC&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE72argCLoDaIZzURrBqj1dCWgFOk5jWaVRdewRfd2WG3nA8OjgQ-nQ-TH94GocoGbolA3WEORWiMXd2aq-WgyRtbSW2N9DGNr6NKZ315RwQ6pHBFb9jZK4qtevrT4citd_-_z_Te&source=gbs_api
+                            [extraLarge] => http://books.google.com/books/content?id=carqdIdfVlYC&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE714y5f9On9v3CTu5NNqbll9GvMj8lUYPTMXZJroCjM_5D6fzGbZGQ30dCarkyKWrw_0FoJM1q3RX-2DKbLddxvQ5IdIAICBSsR2drrvvAEyWTv411hLYUJkMYPuv4LVmyguIdM8&source=gbs_api
+                        )
+
+                    [language] => en
+                    [previewLink] => http://books.google.com.br/books?id=carqdIdfVlYC&hl=&source=gbs_api
+                    [infoLink] => https://play.google.com/store/books/details?id=carqdIdfVlYC&source=gbs_api
+                    [canonicalVolumeLink] => https://play.google.com/store/books/details?id=carqdIdfVlYC
+                )
+
+            [saleInfo] => Array
+                (
+                    [country] => BR
+                    [saleability] => NOT_FOR_SALE
+                    [isEbook] => 
+                )
+
+            [accessInfo] => Array
+                (
+                    [country] => BR
+                    [viewability] => PARTIAL
+                    [embeddable] => 1
+                    [publicDomain] => 
+                    [textToSpeechPermission] => ALLOWED_FOR_ACCESSIBILITY
+                    [epub] => Array
+                        (
+                            [isAvailable] => 
+                        )
+
+                    [pdf] => Array
+                        (
+                            [isAvailable] => 
+                        )
+
+                    [webReaderLink] => http://play.google.com/books/reader?id=carqdIdfVlYC&hl=&source=gbs_api
+                    [accessViewStatus] => SAMPLE
+                    [quoteSharingAllowed] => 
+                )
+
+        )
+
+)
+
