@@ -7,16 +7,17 @@ if (!isset($_SESSION['professor_id'])) {
     exit();
 }
 
-require '../includes/conn.php'; // Arquivo de conexão com o banco
+// chama a conexão com o banco de dados
+require '../includes/conn.php';
 
-// Cadastro de aluno
+// verifica se o formulário foi enviado por post
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Recebe os dados do formulário
+    // recebe os dados que foram enviados do formulário
     $nome = $_POST['nome'];
     $serie = $_POST['serie'];
     $email = $_POST['email'];
 
-    // Valida o formato do e-mail
+    // valida o formado do email
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $_SESSION['toast'] = [
             'type' => 'error',
@@ -26,10 +27,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 
-    // Usa password_hash para maior segurança na senha
+    // essa linha só criptografa a senha do aluno (que pedia antes no formulário, mas eu tirei)
     // $senha = isset($_POST['senha']) ? password_hash($_POST['senha'], PASSWORD_DEFAULT) : null;
 
-    // Verifica se o email do aluno já está cadastrado
+    // verifica se o email do aluno já está cadastrado
     $sql_check = "SELECT id FROM alunos WHERE email = ?";
     $stmt_check = $conn->prepare($sql_check);
     $stmt_check->bind_param("s", $email);
@@ -45,11 +46,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: cadastro_aluno.php");
         exit();
     } else {
-        // Insere o aluno no banco de dados
+        // prepara a consulta pra cadastrar os dados do aluno
         $sql = "INSERT INTO alunos (nome, serie, email) VALUES (?, ?, ?)";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("sss", $nome, $serie, $email);
 
+        // executa a consulta
         if ($stmt->execute()) {
             // Mensagem de sucesso e redireciona
             $_SESSION['toast'] = [

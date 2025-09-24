@@ -1,4 +1,8 @@
 <?php
+/*
+Talvez eu não use mais esse arquivo, porque ele servia pra trocar o código secreto que fazia um login normal
+virar administrador
+*/
 session_start();
 include '../includes/conn.php';
 

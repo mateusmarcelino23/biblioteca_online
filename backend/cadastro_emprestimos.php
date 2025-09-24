@@ -11,11 +11,12 @@ if (!isset($_SESSION['professor_id'])) {
 
 require '../includes/conn.php';
 
-// Inicializa as variáveis de mensagem
+// variáveis de mensagem do toast
 $success_message = null;
 $error_message = null;
 
-// Funções para pesquisa com segurança contra SQL injection
+// pesquisa com segurança contra SQL injection
+// usando operador ternário pra ficar mais simples
 $filtro_aluno = isset($_GET['filtro_aluno']) ? trim($_GET['filtro_aluno']) : '';
 $filtro_livro = isset($_GET['filtro_livro']) ? trim($_GET['filtro_livro']) : '';
 $filtro_serie = isset($_GET['filtro_serie']) ? trim($_GET['filtro_serie']) : '';
@@ -40,6 +41,7 @@ if (!empty($filtro_aluno) && !empty($filtro_serie)) {
     $stmt_alunos->bind_param("s", $filtro_serie);
 }
 
+// executa a consulta para os filtros e pega os resultados
 $stmt_alunos->execute();
 $alunos_result = $stmt_alunos->get_result();
 

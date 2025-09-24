@@ -7,32 +7,34 @@ if (!isset($_SESSION['professor_id'])) {
     exit();
 }
 
+// chama o banco de dados
 require '../includes/conn.php';
 
 // Configuração de logs
-$log_dir = __DIR__ . '/../logs/';
-if (!file_exists($log_dir)) {
-    mkdir($log_dir, 0755, true);
-}
-$log_file = $log_dir . 'livros_log_' . date('Y-m-d') . '.txt';
+// esses logs eu comentei porque não uso, se alguém for usar é só descomentar
+// $log_dir = __DIR__ . '/../logs/';
+// if (!file_exists($log_dir)) {
+//     mkdir($log_dir, 0755, true);
+// }
+// $log_file = $log_dir . 'livros_log_' . date('Y-m-d') . '.txt';
 
-function registrar_log($mensagem, $detalhes = null)
-{
-    global $log_file;
-    $mensagem_completa = date('Y-m-d H:i:s') . " - " . $mensagem;
+// function registrar_log($mensagem, $detalhes = null)
+// {
+//     global $log_file;
+//     $mensagem_completa = date('Y-m-d H:i:s') . " - " . $mensagem;
 
-    if ($detalhes) {
-        $mensagem_completa .= " - Detalhes: " . print_r($detalhes, true);
-    }
+//     if ($detalhes) {
+//         $mensagem_completa .= " - Detalhes: " . print_r($detalhes, true);
+//     }
 
-    $mensagem_completa .= PHP_EOL;
+//     $mensagem_completa .= PHP_EOL;
 
-    try {
-        file_put_contents($log_file, $mensagem_completa, FILE_APPEND | LOCK_EX);
-    } catch (Exception $e) {
-        error_log("Falha ao escrever no log: " . $e->getMessage());
-    }
-}
+//     try {
+//         file_put_contents($log_file, $mensagem_completa, FILE_APPEND | LOCK_EX);
+//     } catch (Exception $e) {
+//         error_log("Falha ao escrever no log: " . $e->getMessage());
+//     }
+// }
 
 function buscarLivroGoogle($termo)
 {
@@ -90,7 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         foreach ($livros_selecionados as $id_livro) {
             try {
                 $livro = buscarDetalhesLivroGoogle($id_livro);
-                registrar_log("Processando livro", ['id' => $id_livro, 'dados' => $livro]);
+                // registrar_log("Processando livro", ['id' => $id_livro, 'dados' => $livro]);
 
                 $titulo = $livro['volumeInfo']['title'] ?? 'Título Desconhecido';
                 $autor = isset($livro['volumeInfo']['authors']) ? implode(', ', $livro['volumeInfo']['authors']) : 'Autor Desconhecido';
@@ -108,9 +110,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     throw new Exception("ISBN não encontrado para o livro '$titulo'");
                 }
 
+                // consulta pra inserir os dados do livro no banco de dados
                 $sql = "INSERT INTO livros (titulo, autor, isbn, capa_url, descricao, categoria, ano_publicacao, genero, quantidade, preview_link)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
+                // prepara a consulta
                 $stmt = $conn->prepare($sql);
                 if (!$stmt) {
                     throw new Exception("Erro ao preparar query: " . $conn->error);
@@ -118,6 +122,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 $stmt->bind_param("ssssssssis", $titulo, $autor, $isbn, $capa_url, $descricao, $categoria, $ano_publicacao, $genero, $quantidade, $preview_link);
 
+                // executa a consulta
                 if ($stmt->execute()) {
                     $sucessos++;
                 } else {
@@ -166,6 +171,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
+// verifica se o formulário da busca foi enviado pela url e se foi enviado certo (com o termo "termo_busca")
 if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['termo_busca'])) {
     $termo_busca = $_GET['termo_busca'];
     $livros = buscarLivroGoogle($termo_busca);

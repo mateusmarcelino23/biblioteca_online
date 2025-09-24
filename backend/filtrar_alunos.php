@@ -20,7 +20,7 @@ if (!empty($_GET['serie'])) {
 // Ordenar por nome
 $query .= " ORDER BY nome ASC";
 
-// Preparar e executar a query
+// Preparar e executar a consulta
 $stmt = $conn->prepare($query);
 if (!empty($params)) {
     $stmt->bind_param(str_repeat('s', count($params)), ...$params);
