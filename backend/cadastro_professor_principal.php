@@ -2,6 +2,7 @@
 session_start();
 include '../includes/conn.php';
 
+// função pra validar o cpf
 function validarCPF($cpf) {
     // Remover qualquer coisa que não seja número
     $cpf = preg_replace('/[^0-9]/', '', $cpf);
@@ -69,13 +70,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 
-    // Hash da senha antes de inserir no banco de dados
+    // criptografa a senha do professor
     $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
 
-    // Insere o professor (agora com campo 'admin')
+    // prepara a consulta
     $stmt = $conn->prepare("INSERT INTO professores (nome, email, cpf, senha, ativo, admin) VALUES (?, ?, ?, ?, 1, ?)");
     $stmt->bind_param("ssssi", $nome, $email, $cpf, $senha_hash, $is_admin);
     
+    // executa a consulta
     if ($stmt->execute()) {
         $_SESSION['sucesso_cadastro'] = 'Cadastro realizado com sucesso! Você já pode fazer login.';
         header("Location: ../frontend/login.php");

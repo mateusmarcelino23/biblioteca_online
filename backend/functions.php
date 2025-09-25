@@ -1,6 +1,6 @@
 <?php 
 function getTopAlunosPorSala($limite = 3) {
-    require '../includes/conn.php'; // ou ajuste o caminho conforme necessário
+    require '../includes/conn.php';
 
     $query = "
         SELECT 

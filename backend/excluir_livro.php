@@ -15,13 +15,15 @@ if (!isset($_GET['id'])) {
     exit();
 }
 
+// guarda o id do livro na variável
 $id = $_GET['id'];
 
-// Exclui o livro do banco de dados
+// exclui o livro do banco de dados
 $sql = "DELETE FROM livros WHERE id = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $id);
 
+// se ele executar a consulta ele mostra sucesso, senão ele mostra o erro
 if ($stmt->execute()) {
     echo "<div class='alert alert-success'>Livro excluído com sucesso!</div>";
 } else {

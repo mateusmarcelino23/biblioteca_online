@@ -9,7 +9,7 @@ if (!isset($_SESSION['professor_id'])) {
 
 require '../includes/conn.php'; // Arquivo de conexão com o banco
 
-// Verifica se o ID foi passado pela URL
+// Verifica se o id do livro foi passado pela URL
 if (!isset($_GET['id'])) {
     header("Location: visualizar_livros.php");
     exit();
