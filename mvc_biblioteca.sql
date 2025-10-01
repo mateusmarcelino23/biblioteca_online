@@ -32,7 +32,6 @@ CREATE TABLE `alunos` (
   `nome` varchar(255) NOT NULL,
   `serie` varchar(50) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `senha` varchar(255) NOT NULL,
   `professor_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`),
