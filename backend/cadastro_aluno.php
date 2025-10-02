@@ -7,7 +7,7 @@ if (!isset($_SESSION['professor_id'])) {
     exit();
 }
 
-// chama a conexão com o banco de dados
+/* chama o arquivo que faz a conexão com o banco de dados pra usar ele */
 require '../includes/conn.php';
 
 // verifica se o formulário foi enviado por post
