@@ -1,11 +1,40 @@
 <?php
 session_start();
+/*
+Inicia a sessão do PHP.
+- Necessário para acessar $_SESSION e saber se o usuário é administrador.
+- Sem isso, não é possível proteger o endpoint.
+*/
+
 require_once '../../includes/auth_admin.php';
+/*
+Inclui arquivo que valida se o usuário logado é administrador.
+- Garante que apenas admins possam criar novos professores.
+- auth_admin.php normalmente verifica $_SESSION e redireciona se não for admin.
+*/
+
 require_once '../../includes/conn.php';
+/*
+Inclui a conexão com o banco de dados.
+- $conn será usado para todas as consultas SQL neste script.
+- Sem isso, não seria possível acessar a tabela 'professores'.
+*/
 
 header('Content-Type: application/json');
+/*
+Define que a saída do script será JSON.
+- Essencial para requisições AJAX do frontend.
+- Sem isso, o retorno poderia ser interpretado como HTML ou texto comum.
+*/
 
-function responder($sucesso, $mensagem = '') {
+// Função auxiliar para retornar JSON padronizado
+function responder($sucesso, $mensagem = '')
+{
+    /*
+    - $sucesso: true ou false indicando se a operação foi bem-sucedida
+    - $mensagem: mensagem de retorno legível para o usuário
+    - exit(): garante que nada mais será executado após o envio da resposta
+    */
     echo json_encode([
         'success' => $sucesso,
         'message' => $mensagem
@@ -13,11 +42,39 @@ function responder($sucesso, $mensagem = '') {
     exit;
 }
 
-// Validar dados recebidos
+// ------------------------
+// Captura e validação dos dados recebidos via POST
+// ------------------------
+
 $nome = trim($_POST['nome'] ?? '');
+/*
+Recebe o nome do professor.
+- trim() remove espaços extras no início e no final.
+- ?? '' garante que, se $_POST['nome'] não existir, usamos string vazia.
+*/
+
 $email = trim($_POST['email'] ?? '');
+/*
+Recebe o email do professor.
+- Mesma lógica do nome.
+*/
+
 $senha = trim($_POST['senha'] ?? '');
+/*
+Recebe a senha do professor.
+- Será criptografada antes de salvar no banco.
+*/
+
 $admin = isset($_POST['admin']) ? 1 : 0;
+/*
+Define se o professor terá privilégios de administrador.
+- Checkbox HTML envia valor apenas se marcado.
+- Se marcado = 1 (admin), caso contrário = 0 (professor normal).
+*/
+
+// ------------------------
+// Validações dos dados
+// ------------------------
 
 if (empty($nome)) {
     responder(false, 'O nome é obrigatório.');
@@ -39,31 +96,74 @@ if (strlen($senha) < 6) {
     responder(false, 'A senha deve ter pelo menos 6 caracteres.');
 }
 
+// ------------------------
 // Verificar se o email já existe
+// ------------------------
+
 $stmt = $conn->prepare("SELECT id FROM professores WHERE email = ?");
+/*
+Query SQL para checar se o email já está cadastrado.
+- Usamos prepared statement para evitar SQL Injection.
+- Apenas selecionamos 'id' porque não precisamos de mais nada.
+*/
+
 $stmt->bind_param("s", $email);
+// Vincula o valor do email ao placeholder ? na query
+
 $stmt->execute();
+// Executa a query
+
 if ($stmt->get_result()->num_rows > 0) {
     responder(false, 'Este email já está cadastrado.');
+    // Se houver algum resultado, o email já existe
 }
+
 $stmt->close();
+// Fecha o statement anterior para liberar memória
 
+// ------------------------
 // Criptografar a senha
-$senha_hash = password_hash($senha, PASSWORD_DEFAULT);
+// ------------------------
 
-// Inserir novo professor
+$senha_hash = password_hash($senha, PASSWORD_DEFAULT);
+/*
+Criptografa a senha usando o algoritmo padrão do PHP (normalmente bcrypt).
+- Nunca armazene senhas em texto puro.
+- PASSWORD_DEFAULT garante compatibilidade futura.
+*/
+
+// ------------------------
+// Inserir novo professor no banco
+// ------------------------
+
 $stmt = $conn->prepare("
     INSERT INTO professores (nome, email, senha, admin, ativo, data_cadastro) 
     VALUES (?, ?, ?, ?, 1, NOW())
 ");
+/*
+Query para inserir novo professor.
+- ? são placeholders para dados fornecidos pelo usuário.
+- 'ativo' = 1 significa que o professor está ativo por padrão.
+- NOW() define a data de cadastro como o momento atual.
+*/
+
 $stmt->bind_param("sssi", $nome, $email, $senha_hash, $admin);
+/*
+Vincula os valores aos placeholders:
+- 's' = string (nome, email, senha_hash)
+- 'i' = inteiro (admin)
+*/
 
 if ($stmt->execute()) {
     responder(true, 'Professor cadastrado com sucesso!');
+    // Retorna sucesso se a inserção ocorreu sem erros
 } else {
     responder(false, 'Erro ao cadastrar professor: ' . $conn->error);
+    // Retorna erro detalhando a falha do MySQL
 }
 
 $stmt->close();
+// Fecha o statement para liberar recursos
+
 $conn->close();
-?> 
+// Fecha a conexão com o banco
