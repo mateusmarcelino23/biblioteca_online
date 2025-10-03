@@ -37,6 +37,7 @@ if (!$config) {
 
 <!DOCTYPE html>
 <html lang="pt" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,6 +47,7 @@ if (!$config) {
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/admin.css">
 </head>
+
 <body>
     <!-- Sidebar -->
     <div class="sidebar">
@@ -113,28 +115,28 @@ if (!$config) {
                             <div class="mb-3">
                                 <label class="form-label">Dias de Empréstimo</label>
                                 <input type="number" class="form-control" name="dias_emprestimo"
-                                       value="<?php echo $config['dias_emprestimo']; ?>" min="1" max="30">
+                                    value="<?php echo $config['dias_emprestimo']; ?>" min="1" max="30">
                                 <small class="text-muted">Quantidade padrão de dias para devolução</small>
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Máximo de Livros por Aluno</label>
                                 <input type="number" class="form-control" name="max_livros_aluno"
-                                       value="<?php echo $config['max_livros_aluno']; ?>" min="1" max="10">
+                                    value="<?php echo $config['max_livros_aluno']; ?>" min="1" max="10">
                                 <small class="text-muted">Quantidade máxima de livros que um aluno pode emprestar</small>
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Máximo de Renovações</label>
                                 <input type="number" class="form-control" name="max_renovacoes"
-                                       value="<?php echo $config['max_renovacoes']; ?>" min="0" max="5">
+                                    value="<?php echo $config['max_renovacoes']; ?>" min="0" max="5">
                                 <small class="text-muted">Quantidade máxima de vezes que um empréstimo pode ser renovado</small>
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Multa por Dia de Atraso (R$)</label>
                                 <input type="number" class="form-control" name="multa_dia_atraso"
-                                       value="<?php echo $config['multa_dia_atraso']; ?>" step="0.01" min="0">
+                                    value="<?php echo $config['multa_dia_atraso']; ?>" step="0.01" min="0">
                                 <small class="text-muted">Valor da multa por dia de atraso na devolução</small>
                             </div>
                         </div>
@@ -146,7 +148,7 @@ if (!$config) {
                             <div class="mb-3">
                                 <label class="form-label">Email para Notificações</label>
                                 <input type="email" class="form-control" name="email_notificacao"
-                                       value="<?php echo $config['email_notificacao']; ?>">
+                                    value="<?php echo $config['email_notificacao']; ?>">
                                 <small class="text-muted">Email que receberá as notificações do sistema</small>
                             </div>
 
@@ -159,7 +161,7 @@ if (!$config) {
                                 <small class="text-muted">Tema padrão do sistema para novos usuários</small>
                             </div>
 
-                            <div class="mb-3">
+                            <!-- <div class="mb-3">
                                 <div class="form-check form-switch">
                                     <input class="form-check-input" type="checkbox" name="backup_automatico"
                                            <?php echo $config['backup_automatico'] ? 'checked' : ''; ?>>
@@ -172,7 +174,7 @@ if (!$config) {
                                 <button type="button" class="btn btn-info" onclick="realizarBackup()">
                                     <i class="fas fa-database"></i> Realizar Backup Agora
                                 </button>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
@@ -291,4 +293,5 @@ if (!$config) {
         }
     </script>
 </body>
+
 </html>
