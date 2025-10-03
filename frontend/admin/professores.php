@@ -161,13 +161,13 @@ $professores = $stmt->get_result();
                                             <button class="btn btn-sm btn-primary" onclick="editarProfessor(<?php echo $prof['id']; ?>)">
                                                 <i class="fas fa-edit"></i>
                                             </button>
-                                            <button class="btn btn-sm btn-<?php echo $prof['ativo'] ? 'danger' : 'success'; ?>"
+                                            <!-- <button class="btn btn-sm btn-<?php echo $prof['ativo'] ? 'danger' : 'success'; ?>"
                                                     onclick="alterarStatus(<?php echo $prof['id']; ?>, <?php echo $prof['ativo']; ?>)">
                                                 <i class="fas fa-<?php echo $prof['ativo'] ? 'ban' : 'check'; ?>"></i>
                                             </button>
                                             <button class="btn btn-sm btn-info" onclick="verHistorico(<?php echo $prof['id']; ?>)">
                                                 <i class="fas fa-history"></i>
-                                            </button>
+                                            </button> -->
                                         </div>
                                     </td>
                                 </tr>
