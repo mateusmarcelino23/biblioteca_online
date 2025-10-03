@@ -238,6 +238,10 @@ body {
     font-weight: 500;
 }
 
+.transformar-professor:hover{
+    background-color: rgb(105, 105, 105) !important;
+}
+
 /* Table */
 .table {
     color: var(--text-color);

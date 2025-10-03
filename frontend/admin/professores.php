@@ -1,5 +1,6 @@
 <?php
 session_start();
+$professor_id = $_SESSION['professor_id'] ?? null;
 require_once '../../includes/auth_admin.php';
 require_once '../../includes/conn.php';
 
@@ -16,10 +17,13 @@ $stmt = $conn->prepare("
 ");
 $stmt->execute();
 $professores = $stmt->get_result();
+
+
 ?>
 
 <!DOCTYPE html>
 <html lang="pt" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,6 +34,7 @@ $professores = $stmt->get_result();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="css/admin.css">
 </head>
+
 <body>
     <!-- Sidebar -->
     <div class="sidebar">
@@ -134,9 +139,9 @@ $professores = $stmt->get_result();
                                     <td>
                                         <div class="d-flex align-items-center">
                                             <img src="https://ui-avatars.com/api/?name=<?php echo urlencode($prof['nome']); ?>&background=random"
-                                                 alt="<?php echo htmlspecialchars($prof['nome']); ?>"
-                                                 class="rounded-circle me-2"
-                                                 style="width: 32px; height: 32px;">
+                                                alt="<?php echo htmlspecialchars($prof['nome']); ?>"
+                                                class="rounded-circle me-2"
+                                                style="width: 32px; height: 32px;">
                                             <?php echo htmlspecialchars($prof['nome']); ?>
                                         </div>
                                     </td>
@@ -158,16 +163,27 @@ $professores = $stmt->get_result();
                                     </td>
                                     <td>
                                         <div class="btn-group">
-                                            <button class="btn btn-sm btn-primary" onclick="editarProfessor(<?php echo $prof['id']; ?>)">
+                                            <button class="btn btn-sm btn-primary" onclick="editarProfessor(<?php echo $prof['id']; ?>)" title="editar dados do professor (ainda não funciona)">
                                                 <i class="fas fa-edit"></i>
                                             </button>
-                                            <button class="btn btn-sm btn-<?php echo $prof['ativo'] ? 'danger' : 'success'; ?>"
+                                            <?php foreach ($professores as $professor): ?>
+                                                <form method="POST" style="display:inline">
+                                                    <input type="hidden" name="professor_id" value="<?= $professor['id'] ?>">
+                                                    <button type="submit" class="btn btn-sm btn-primary" style="background-color: grey; border: none;">
+                                                        <i class="fa-regular fa-user"></i>
+                                                    </button>
+                                                </form>
+                                                <?php if (!empty($msg)): ?>
+                                                    <div class="alert alert-info"><?= htmlspecialchars($msg) ?></div>
+                                                <?php endif; ?>
+                                            <?php endforeach; ?>
+                                            <!-- <button class="btn btn-sm btn-<?php echo $prof['ativo'] ? 'danger' : 'success'; ?>"
                                                     onclick="alterarStatus(<?php echo $prof['id']; ?>, <?php echo $prof['ativo']; ?>)">
                                                 <i class="fas fa-<?php echo $prof['ativo'] ? 'ban' : 'check'; ?>"></i>
-                                            </button>
-                                            <button class="btn btn-sm btn-info" onclick="verHistorico(<?php echo $prof['id']; ?>)">
+                                            </button> -->
+                                            <!-- <button class="btn btn-sm btn-info" onclick="verHistorico(<?php echo $prof['id']; ?>)">
                                                 <i class="fas fa-history"></i>
-                                            </button>
+                                            </button> -->
                                         </div>
                                     </td>
                                 </tr>
@@ -184,7 +200,7 @@ $professores = $stmt->get_result();
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Novo Professor</h5>
+                    <h5 class="modal-title">Novo Usuário</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
@@ -225,7 +241,9 @@ $professores = $stmt->get_result();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
+        const professorId = <?php echo json_encode($professor_id); ?>;
         // Theme Toggle
         const themeToggle = document.getElementById('themeToggle');
         const themeIcon = document.getElementById('themeIcon');
@@ -264,56 +282,47 @@ $professores = $stmt->get_result();
 
         $('#filterStatus').on('change', function() {
             const value = $(this).val();
-            if (value === '') {
-                $('tbody tr').show();
-            } else {
-                $('tbody tr').each(function() {
-                    const isAtivo = $(this).find('.badge').hasClass('bg-success');
-                    $(this).toggle(value === '1' ? isAtivo : !isAtivo);
-                });
-            }
-        });
+            $('tbody tr').each(function() {
+                const isAtivo = $(this).find('.badge').hasClass('bg-success');
 
-        // Professor Functions
-        function salvarProfessor() {
-            const form = $('#formNovoProfessor');
-            const data = {
-                nome: form.find('[name="nome"]').val(),
-                email: form.find('[name="email"]').val(),
-                senha: form.find('[name="senha"]').val(),
-                admin: form.find('[name="admin"]').is(':checked') ? 1 : 0
-            };
-
-            $.ajax({
-                url: '../../backend/admin/salvar_professor.php',
-                type: 'POST',
-                data: data,
-                success: function(response) {
-                    if (response.success) {
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Sucesso!',
-                            text: 'Professor cadastrado com sucesso!'
-                        }).then(() => {
-                            location.reload();
-                        });
-                    } else {
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Erro!',
-                            text: response.message
-                        });
-                    }
-                },
-                error: function() {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Erro!',
-                        text: 'Ocorreu um erro ao salvar o professor.'
-                    });
+                if (value === '') {
+                    $(this).show();
+                } else if (value === '1') {
+                    $(this).toggle(isAtivo);
+                } else {
+                    $(this).toggle(!isAtivo);
                 }
             });
-        }
+        });
+
+
+
+
+        document.querySelectorAll(".transformar-professor").forEach(button => {
+            button.addEventListener("click", function() {
+                const professorId = this.getAttribute("data-id");
+
+                fetch("../../backend/admin/transformar_professor.php", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            id: professorId
+                        })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            alert("Professor promovido a administrador!");
+                            location.reload(); // atualiza a página
+                        } else {
+                            alert("Erro: " + data.message);
+                        }
+                    })
+                    .catch(error => console.error("Erro:", error));
+            });
+        });
 
         function alterarStatus(id, statusAtual) {
             const novoStatus = !statusAtual;
@@ -331,7 +340,10 @@ $professores = $stmt->get_result();
                     $.ajax({
                         url: '../../backend/admin/alterar_status_professor.php',
                         type: 'POST',
-                        data: { id, status: novoStatus ? 1 : 0 },
+                        data: {
+                            id,
+                            status: novoStatus ? 1 : 0
+                        },
                         success: function(response) {
                             if (response.success) {
                                 location.reload();
@@ -348,6 +360,50 @@ $professores = $stmt->get_result();
             });
         }
 
+        function transformarProfessorEmAdmin(professorId) {
+            fetch("../../backend/admin/salvar_professor.php", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        id: professorId
+                    })
+                })
+                .then(async response => {
+                    const text = await response.text(); // pega o corpo cru
+                    const ct = response.headers.get("content-type") || "";
+
+                    if (!response.ok) {
+                        console.error("Resposta HTTP não OK:", response.status, text);
+                        throw new Error("Erro HTTP " + response.status);
+                    }
+
+                    if (ct.includes("application/json")) {
+                        try {
+                            return JSON.parse(text); // agora parse seguro
+                        } catch (e) {
+                            console.error("Falha ao parsear JSON:", e, "raw:", text);
+                            throw e;
+                        }
+                    } else {
+                        // mostra o HTML/erro retornado no console para debugar
+                        console.error("Resposta NÃO é JSON — resposta bruta:", text);
+                        throw new Error("Resposta do servidor não é JSON. Veja console (Network -> Response).");
+                    }
+                })
+                .then(data => {
+                    if (data.success) {
+                        alert("O professor agora é admin!");
+                    } else {
+                        alert("Erro: " + (data.message || "Desconhecido"));
+                    }
+                })
+                .catch(err => {
+                    console.error("Deu erro na requisição:", err);
+                });
+        }
+
         function editarProfessor(id) {
             // Implementar edição
         }
@@ -357,4 +413,5 @@ $professores = $stmt->get_result();
         }
     </script>
 </body>
+
 </html>
