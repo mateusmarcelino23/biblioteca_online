@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt" data-theme="light">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/suporte.css">
 </head>
+
 <body>
     <!-- Theme Toggle Button -->
     <button class="theme-toggle" id="themeToggle">
@@ -57,19 +59,25 @@
                             <i class="fas fa-comment"></i> Mensagem
                         </label>
                         <textarea class="form-control" id="message" name="message" rows="5" placeholder="Digite sua mensagem" required></textarea>
-                        <input type="hidden" name="_next" value="http://localhost:8081/mvc-biblioteca/includes/agradecimentos.html">
+                        <input type="hidden" name="_next" value="http://localhost:8081/biblioteca_online/includes/agradecimentos.html">
                     </div>
                     <button type="submit" class="btn btn-primary w-100">
                         <i class="fas fa-paper-plane"></i> Enviar
                     </button>
                 </form>
             </div>
+            <br>
+            <a href="dashboard.php" class="btn btn-primary w-100" id="voltaDashboardId" style="margin-top: 10px;">
+                <i class="fas fa-arrow-left"></i> Voltar para o Painel</a>
+            <br>
         </div>
     </div>
+
     <div id="footer"></div>
     <link rel="stylesheet" href="./frontend/_css/footer.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/suporte.js"></script>
     <link rel="stylesheet" href="_css/footer.css">
 </body>
+
 </html>

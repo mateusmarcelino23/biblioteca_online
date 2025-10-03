@@ -40,7 +40,8 @@ include('../backend/lista_alunos.php')
                                     <th>Nome</th>
                                     <th>Série</th>
                                     <th>Email</th>
-                                    <th>Ações</th>
+                                    <th>Ação</th>
+                                    <th>Ação</th>
                                 </tr>
                             </thead>
                             <tbody>";
@@ -56,6 +57,11 @@ include('../backend/lista_alunos.php')
                                         <i class='fas fa-trash-alt'></i> Deletar
                                     </a>
                                 </td>
+                                <td>
+                                    <a href='editar_aluno.php?id=" . $row['id'] . "' class='btn btn-danger btn-sm' style='background-color: #007bff; border-color: #007bff;'>
+                                        <i class='fas fa-edit'></i> Editar
+                                    </a>
+                                </td>
                             </tr>";
                     }
 
@@ -69,8 +75,8 @@ include('../backend/lista_alunos.php')
             </div>
         </div>
         <br>
-                <a href="dashboard.php" class="btn btn-primary w-100" id="voltaDashboardId">Voltar para o Painel</a>
-                <br>
+            <a href="dashboard.php" class="btn btn-primary w-100" id="voltaDashboardId">Voltar para o Painel</a>
+        <br>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,56 +1,53 @@
 <?php
-// Inicia sessão PHP
-// Necessário para acessar informações do usuário logado e armazenar mensagens
+// session_start(): inicia uma sessão ou continua a sessão existente
 session_start();
 
-// --- Verifica se o professor está logado ---
-// Se não estiver logado, redireciona para a página de login
+// isset(): verifica se a variável de sessão 'professor_id' existe
 if (!isset($_SESSION['professor_id'])) {
+    // header(): envia cabeçalho HTTP para redirecionamento
     header("Location: ../frontend/login.php");
-    exit(); // Interrompe execução do script após redirecionamento
-}
-
-// Inclui arquivo de conexão com o banco
-// Cria a variável $conn usada para todas consultas SQL
-require '../includes/conn.php';
-
-// --- Verifica se o ID do livro foi passado via URL ---
-// Sem isso não sabemos qual livro editar
-if (!isset($_GET['id'])) {
-    header("Location: visualizar_livros.php"); // Redireciona se não tiver ID
+    // exit(): encerra imediatamente a execução do script
     exit();
 }
 
-// Recebe o ID do livro da URL
+// require(): inclui e executa o arquivo de conexão com o banco de dados
+require '../includes/conn.php';
+
+// isset(): verifica se a variável $_GET['id'] existe
+if (!isset($_GET['id'])) {
+    // header(): recarrega a página de edição de livros
+    header("Location: ../frontend/visualizar_livros.php");
+    exit();
+}
+
+// Armazena o valor de $_GET['id'] na variável $id
 $id = $_GET['id'];
 
-// --- Busca os dados do livro para exibir no formulário de edição ---
-// Prepared statement para evitar SQL Injection
+// prepare(): prepara uma query SQL para execução segura
 $sql = "SELECT * FROM livros WHERE id = ?";
 $stmt = $conn->prepare($sql);
 
-// Associa o parâmetro (i = integer)
+// bind_param(): associa variáveis aos parâmetros da query preparada
 $stmt->bind_param("i", $id);
 
-// Executa a query
+// execute(): executa a query preparada
 $stmt->execute();
 
-// Obtém o resultado como array associativo
+// get_result(): obtém o resultado da execução da query
 $result = $stmt->get_result();
 
-// Verifica se o livro existe
+// num_rows: retorna o número de linhas do resultado
 if ($result->num_rows === 0) {
-    // Se não encontrou, exibe mensagem de erro
     echo "<div class='alert alert-danger'>Livro não encontrado!</div>";
     exit();
 }
 
-// Armazena os dados do livro para popular o formulário
+// fetch_assoc(): retorna a próxima linha do resultado como array associativo
 $livro = $result->fetch_assoc();
 
-// --- Verifica se o formulário foi enviado para atualizar o livro ---
+// $_SERVER["REQUEST_METHOD"]: verifica o método HTTP da requisição
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Recebe os dados enviados pelo formulário
+    // $_POST[]: acessa os dados enviados pelo formulário via POST
     $titulo = $_POST['titulo'];
     $autor = $_POST['autor'];
     $ano_publicacao = $_POST['ano_publicacao'];
@@ -58,22 +55,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $isbn = $_POST['isbn'];
     $quantidade = $_POST['quantidade'];
 
-    // --- Atualiza o livro no banco ---
+    // prepare(): prepara a query de atualização
     $sql_update = "UPDATE livros SET titulo = ?, autor = ?, ano_publicacao = ?, genero = ?, isbn = ?, quantidade = ? WHERE id = ?";
     $stmt_update = $conn->prepare($sql_update);
 
-    // Associa os parâmetros (s = string, i = integer)
+    // bind_param(): associa variáveis aos parâmetros da query de atualização
     $stmt_update->bind_param("ssssssi", $titulo, $autor, $ano_publicacao, $genero, $isbn, $quantidade, $id);
 
-    // Executa a query e verifica se foi bem-sucedida
+    // execute(): executa a query de atualização
     if ($stmt_update->execute()) {
-        echo "<div class='alert alert-success'>Livro atualizado com sucesso!</div>";
+        // $_SESSION[]: armazena uma mensagem de sucesso na sessão
+        $_SESSION['mensagem'] = "Livro atualizado com sucesso!";
+        // header(): recarrega a página de edição de livros
+        header("Location: ../frontend/editar_livro.php?id=" . $id);
+        exit();
     } else {
         echo "<div class='alert alert-danger'>Erro ao atualizar o livro!</div>";
     }
 }
 
-// Fecha statement de seleção
+// close(): fecha o statement
 $stmt->close();
 
-// OBS: Você poderia fechar a conexão com $conn->close() ao final, mas se o script tiver mais operações pode manter aberta
+// close(): fecha a conexão com o banco
+$conn->close();
+?>

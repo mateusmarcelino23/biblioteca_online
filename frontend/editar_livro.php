@@ -4,6 +4,7 @@ include('../backend/editar_livro.php')
 
 <!DOCTYPE html>
 <html lang="pt" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,16 @@ include('../backend/editar_livro.php')
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/editar_livro.css">
 </head>
+
 <body>
+
+    <?php
+    if (isset($_SESSION['mensagem'])) {
+        echo "<div class='alert alert-success mb-3'>" . $_SESSION['mensagem'] . "</div>";
+        unset($_SESSION['mensagem']); // remove a mensagem da sessão
+    }
+    ?>
+
     <!-- Theme Toggle Button -->
     <button class="theme-toggle" id="themeToggle">
         <i class="fas fa-moon" id="themeIcon"></i>
@@ -65,7 +75,7 @@ include('../backend/editar_livro.php')
                         <label for="isbn" class="form-label">
                             <i class="fas fa-barcode"></i> ISBN
                         </label>
-                        <input type="text" class="form-control" name="isbn" value="<?php echo $livro['isbn']; ?>" required>
+                        <input type="text" class="form-control" name="isbn" value="<?php echo $livro['isbn']; ?>">
                     </div>
                     <div class="mb-3">
                         <label for="quantidade" class="form-label">
@@ -79,19 +89,17 @@ include('../backend/editar_livro.php')
                 </form>
             </div>
         </div>
-        <a href="visualizar_livros.php" class="btn btn-secondary w-100">
-            <i class="fas fa-arrow-left"></i> Voltar
-        </a>
+        <br>
+        <a href="visualizar_livros.php" class="btn btn-primary w-100" id="voltaDashboardId">
+            <i class="fas fa-arrow-left"></i> Voltar</a>
+        <br>
     </div>
-        <div class="" id="footer"></div>
-        <link rel="stylesheet" href="_css/footer.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        
-    </script>
-</body>
-</html>
 
-<?php
-$conn->close();
-?>
+    <div id="footer"></div>
+    <link rel="stylesheet" href="./frontend/_css/footer.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/suporte.js"></script>
+    <link rel="stylesheet" href="_css/footer.css">
+</body>
+
+</html>
