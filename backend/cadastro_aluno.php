@@ -1,44 +1,59 @@
 <?php
+// Inicia a sessão PHP
+// Necessário para acessar variáveis de sessão ($_SESSION)
+// Sessões permitem manter dados do usuário entre páginas, como login
 session_start();
 
-// Verifica se o professor está logado, se não, redireciona para login
+// Verifica se o professor está logado
+// Se não houver 'professor_id' na sessão, significa que o usuário não autenticou
 if (!isset($_SESSION['professor_id'])) {
+    // Redireciona para a página de login
     header("Location: login.php");
-    exit();
+    exit(); // Interrompe execução do script para evitar acesso não autorizado
 }
 
-// chama a conexão com o banco de dados
+// Inclui o arquivo de conexão com o banco de dados
+// $conn será a variável que contém a conexão ativa
 require '../includes/conn.php';
 
-// verifica se o formulário foi enviado por post
+// Verifica se o formulário foi enviado via método POST
+// $_SERVER["REQUEST_METHOD"] contém o método HTTP usado (GET, POST, etc)
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // recebe os dados que foram enviados do formulário
+
+    // Recebe os dados enviados pelo formulário
+    // $_POST['campo'] acessa os valores do input com 'name="campo"'
     $nome = $_POST['nome'];
     $serie = $_POST['serie'];
     $email = $_POST['email'];
 
-    // valida o formado do email
+    // Valida o formato do email usando filter_var
+    // FILTER_VALIDATE_EMAIL retorna false se o email for inválido
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        // Armazena mensagem de erro em sessão para exibir via "toast"
         $_SESSION['toast'] = [
-            'type' => 'error',
+            'type' => 'error', // Tipo da mensagem (error/success)
             'message' => "Erro: Email inválido!"
         ];
+        // Redireciona de volta para a página de cadastro
         header("Location: cadastro_aluno.php");
-        exit();
+        exit(); // Interrompe o script para evitar execução posterior
     }
 
-    // essa linha só criptografa a senha do aluno (que pedia antes no formulário, mas eu tirei)
+    // Linha comentada: criptografia da senha (não usada no momento)
+    // password_hash gera hash seguro da senha usando algoritmo padrão do PHP
     // $senha = isset($_POST['senha']) ? password_hash($_POST['senha'], PASSWORD_DEFAULT) : null;
 
-    // verifica se o email do aluno já está cadastrado
+    // Verifica se o email do aluno já existe no banco de dados
+    // Usando prepared statement para evitar SQL Injection
     $sql_check = "SELECT id FROM alunos WHERE email = ?";
     $stmt_check = $conn->prepare($sql_check);
-    $stmt_check->bind_param("s", $email);
-    $stmt_check->execute();
-    $stmt_check->store_result();
+    $stmt_check->bind_param("s", $email); // "s" = string
+    $stmt_check->execute(); // Executa a consulta
+    $stmt_check->store_result(); // Armazena resultado para poder verificar número de linhas
 
+    // Se já existe um aluno com esse email
     if ($stmt_check->num_rows > 0) {
-        // Mensagem de erro e redireciona
+        // Mensagem de erro usando sessão e redireciona
         $_SESSION['toast'] = [
             'type' => 'error',
             'message' => "Erro: Este email já está cadastrado!"
@@ -46,34 +61,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: cadastro_aluno.php");
         exit();
     } else {
-        // prepara a consulta pra cadastrar os dados do aluno
+        // Prepara query para inserir os dados do novo aluno
         $sql = "INSERT INTO alunos (nome, serie, email) VALUES (?, ?, ?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sss", $nome, $serie, $email);
+        $stmt->bind_param("sss", $nome, $serie, $email); // Todos são strings
 
-        // executa a consulta
+        // Executa a inserção no banco
         if ($stmt->execute()) {
-            // Mensagem de sucesso e redireciona
+            // Se deu certo, salva mensagem de sucesso na sessão
             $_SESSION['toast'] = [
                 'type' => 'success',
                 'message' => "Aluno cadastrado com sucesso!"
             ];
-            header("Location: cadastro_aluno.php");
+            header("Location: cadastro_aluno.php"); // Redireciona
             exit();
         } else {
-            // Mensagem de erro e redireciona
+            // Se houve erro, salva mensagem de erro na sessão
             $_SESSION['toast'] = [
                 'type' => 'error',
                 'message' => "Erro ao cadastrar aluno!"
             ];
-            header("Location: cadastro_aluno.php");
+            header("Location: cadastro_aluno.php"); // Redireciona
             exit();
         }
     }
 
+    // Fecha statements para liberar recursos
     $stmt_check->close();
     $stmt->close();
 }
 
+// Fecha conexão com o banco de dados
 $conn->close();
-?>

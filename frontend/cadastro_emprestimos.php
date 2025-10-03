@@ -16,7 +16,6 @@ include('../backend/cadastro_emprestimos.php');
 </head>
 <body>
     <div class="container mt-5">
-        <!-- Theme Toggle Button -->
         <button class="theme-toggle" id="themeToggle">
             <i class="fas fa-moon" id="themeIcon"></i>
         </button>

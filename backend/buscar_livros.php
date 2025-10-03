@@ -1,65 +1,55 @@
 <?php
+// Inicia a sessão PHP
+// Necessário para acessar variáveis de sessão como $_SESSION['professor_id']
+// Sessões permitem manter dados do usuário entre páginas, como login e mensagens
 session_start();
 
-// Verifica se o usuário está logado
+// Verifica se o professor está logado
+// Se não estiver, redireciona para a página de login
 if (!isset($_SESSION['professor_id'])) {
-    header("Location: login.php");
-    exit();
+    header("Location: login.php"); // Redirecionamento
+    exit(); // Interrompe a execução para impedir acesso não autorizado
 }
 
-// chama o banco de dados
+// Inclui arquivo de conexão com banco de dados
+// $conn será usado para todas as operações SQL
 require '../includes/conn.php';
 
-// Configuração de logs
-// esses logs eu comentei porque não uso, se alguém for usar é só descomentar
-// $log_dir = __DIR__ . '/../logs/';
-// if (!file_exists($log_dir)) {
-//     mkdir($log_dir, 0755, true);
-// }
+// --- Configuração de logs (comentada) ---
+// Permite registrar logs de processamento para auditoria ou depuração
+// $log_dir = __DIR__ . '/../logs/'; // Caminho absoluto da pasta logs
+// if (!file_exists($log_dir)) mkdir($log_dir, 0755, true); // Cria pasta se não existir
 // $log_file = $log_dir . 'livros_log_' . date('Y-m-d') . '.txt';
 
-// function registrar_log($mensagem, $detalhes = null)
-// {
-//     global $log_file;
-//     $mensagem_completa = date('Y-m-d H:i:s') . " - " . $mensagem;
+// Função registrar_log comentada
+// Poderia registrar mensagens com timestamp e detalhes do processamento
+// function registrar_log($mensagem, $detalhes = null) { ... }
 
-//     if ($detalhes) {
-//         $mensagem_completa .= " - Detalhes: " . print_r($detalhes, true);
-//     }
-
-//     $mensagem_completa .= PHP_EOL;
-
-//     try {
-//         file_put_contents($log_file, $mensagem_completa, FILE_APPEND | LOCK_EX);
-//     } catch (Exception $e) {
-//         error_log("Falha ao escrever no log: " . $e->getMessage());
-//     }
-// }
-
+// --- Função para buscar livros no Google Books pela API ---
 function buscarLivroGoogle($termo)
 {
     try {
+        // Monta a URL da API com o termo de busca
         $url = 'https://www.googleapis.com/books/v1/volumes?q=' . urlencode($termo);
 
-        // Tenta obter os dados
+        // Tenta obter os dados via HTTP GET
+        // O @ silencia warnings, caso a URL falhe
         $response = @file_get_contents($url);
 
+        // Se falhou, lança exceção
         if ($response === false) {
             throw new Exception("Não foi possível acessar a API do Google Books.");
         }
 
         // Decodifica JSON para array associativo
         return json_decode($response, true);
-
     } catch (Exception $e) {
-        // Apenas retorna um array vazio em caso de erro
-        // Você pode trocar por echo se quiser exibir o erro
-        // echo "Erro ao buscar livros: " . $e->getMessage();
+        // Retorna array vazio em caso de erro
         return [];
     }
 }
 
-
+// Função para buscar detalhes de um livro específico pelo ID na API do Google
 function buscarDetalhesLivroGoogle($id_livro)
 {
     $url = 'https://www.googleapis.com/books/v1/volumes/' . $id_livro;
@@ -67,33 +57,40 @@ function buscarDetalhesLivroGoogle($id_livro)
     return json_decode($response, true);
 }
 
+// Função para formatar mensagens de erro do MySQL de forma amigável
 function formatarErroBanco($erro)
 {
-    // Tratamento de erros específicos do MySQL
+    // Caso seja registro duplicado
     if (strpos($erro, "Duplicate entry") !== false) {
         if (strpos($erro, "isbn") !== false) {
             return "Já existe um livro com este ISBN cadastrado.";
         }
         return "Registro duplicado: este livro já existe no sistema.";
     }
+    // Caso algum dado seja muito grande para a coluna
     if (strpos($erro, "Data too long") !== false) {
         return "Dados muito longos para algum campo. Verifique especialmente a URL da capa.";
     }
+    // Para outros tipos de erro
     return "Erro no banco de dados: " . $erro;
 }
 
+// --- Processamento do formulário de cadastro de livros ---
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Verifica se algum livro foi selecionado no POST
     if (isset($_POST['livros']) && !empty($_POST['livros'])) {
-        $livros_selecionados = $_POST['livros'];
-        $erros = [];
-        $sucessos = 0;
-        $livros_com_erro = [];
+        $livros_selecionados = $_POST['livros']; // Array de IDs de livros
+        $erros = []; // Array para armazenar erros de cada livro
+        $sucessos = 0; // Contador de livros cadastrados com sucesso
+        $livros_com_erro = []; // Detalhes dos livros com erro
 
+        // Loop para processar cada livro selecionado
         foreach ($livros_selecionados as $id_livro) {
             try {
+                // Busca detalhes do livro na API
                 $livro = buscarDetalhesLivroGoogle($id_livro);
-                // registrar_log("Processando livro", ['id' => $id_livro, 'dados' => $livro]);
 
+                // Dados do livro com fallback caso algum campo esteja ausente
                 $titulo = $livro['volumeInfo']['title'] ?? 'Título Desconhecido';
                 $autor = isset($livro['volumeInfo']['authors']) ? implode(', ', $livro['volumeInfo']['authors']) : 'Autor Desconhecido';
                 $isbn = $livro['volumeInfo']['industryIdentifiers'][0]['identifier'] ?? 'ISBN Desconhecido';
@@ -103,29 +100,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $categoria = $livro['volumeInfo']['categories'][0] ?? NULL;
                 $ano_publicacao = substr($livro['volumeInfo']['publishedDate'], 0, 4) ?? NULL;
                 $genero = $livro['volumeInfo']['categories'][0] ?? NULL;
-                $quantidade = 1;
+                $quantidade = 1; // Quantidade padrão
 
-                // Validação básica dos dados
+                // Validação básica: ISBN obrigatório
                 if (empty($isbn)) {
                     throw new Exception("ISBN não encontrado para o livro '$titulo'");
                 }
 
-                // consulta pra inserir os dados do livro no banco de dados
+                // Query para inserir livro no banco de dados
                 $sql = "INSERT INTO livros (titulo, autor, isbn, capa_url, descricao, categoria, ano_publicacao, genero, quantidade, preview_link)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-                // prepara a consulta
+                // Prepara a query
                 $stmt = $conn->prepare($sql);
                 if (!$stmt) {
                     throw new Exception("Erro ao preparar query: " . $conn->error);
                 }
 
+                // Associa parâmetros com tipos corretos
+                // s = string, i = integer
                 $stmt->bind_param("ssssssssis", $titulo, $autor, $isbn, $capa_url, $descricao, $categoria, $ano_publicacao, $genero, $quantidade, $preview_link);
 
-                // executa a consulta
+                // Executa a query
                 if ($stmt->execute()) {
-                    $sucessos++;
+                    $sucessos++; // Incrementa contador de sucesso
                 } else {
+                    // Formata o erro para exibir mensagem amigável
                     $erro_formatado = formatarErroBanco($stmt->error);
                     $erros[] = "$titulo: " . $erro_formatado;
                     $livros_com_erro[] = [
@@ -135,6 +135,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     ];
                 }
             } catch (Exception $e) {
+                // Captura exceções e adiciona nos arrays de erro
                 $erros[] = "Erro ao processar livro: " . $e->getMessage();
                 $livros_com_erro[] = [
                     'id' => $id_livro,
@@ -143,6 +144,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
 
+        // Mensagens de feedback ao usuário via sessão
         if (empty($erros)) {
             $_SESSION['toast'] = [
                 'type' => 'success',
@@ -155,13 +157,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 'type' => 'error',
                 'message' => $mensagem
             ];
+            // Armazena detalhes de erros e sucessos na sessão
             $_SESSION['erros'] = $erros;
             $_SESSION['sucessos'] = $sucessos;
             $_SESSION['livros_com_erro'] = $livros_com_erro;
             header("Location: buscar_livros.php");
         }
-        exit();
+        exit(); // Interrompe execução após redirecionamento
     } else {
+        // Nenhum livro selecionado
         $_SESSION['toast'] = [
             'type' => 'error',
             'message' => "Nenhum livro selecionado para cadastro."
@@ -171,8 +175,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// verifica se o formulário da busca foi enviado pela url e se foi enviado certo (com o termo "termo_busca")
+// --- Processamento do formulário de busca (GET) ---
 if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['termo_busca'])) {
-    $termo_busca = $_GET['termo_busca'];
-    $livros = buscarLivroGoogle($termo_busca);
+    $termo_busca = $_GET['termo_busca']; // Termo digitado pelo usuário
+    $livros = buscarLivroGoogle($termo_busca); // Busca na API do Google
 }

@@ -1,48 +1,64 @@
 <?php
+// Inclui o arquivo de conexão com o banco
+// Cria a variável $conn que será usada para consultas SQL
 require_once '../includes/conn.php';
 
-// Construir a query base
+// --- Construção da query base ---
+// Começamos com "WHERE 1=1" para facilitar a adição de filtros dinamicamente
 $query = "SELECT id, nome, serie FROM alunos WHERE 1=1";
-$params = array();
+$params = array(); // Array que vai armazenar os parâmetros para prepared statement
 
-// Aplicar filtro por nome
+// --- Filtro por nome ---
+// Verifica se o parâmetro 'nome' foi enviado via GET
 if (!empty($_GET['nome'])) {
-    $query .= " AND nome LIKE ?";
-    $params[] = "%" . $_GET['nome'] . "%";
+    $query .= " AND nome LIKE ?"; // Adiciona condição LIKE para pesquisa parcial
+    $params[] = "%" . $_GET['nome'] . "%"; // Adiciona o valor ao array de parâmetros
 }
 
-// Aplicar filtro por série
+// --- Filtro por série ---
+// Verifica se o parâmetro 'serie' foi enviado via GET
 if (!empty($_GET['serie'])) {
-    $query .= " AND serie = ?";
-    $params[] = $_GET['serie'];
+    $query .= " AND serie = ?"; // Adiciona condição de igualdade para série
+    $params[] = $_GET['serie']; // Adiciona o valor ao array de parâmetros
 }
 
-// Ordenar por nome
+// --- Ordenação ---
+// Ordena os resultados pelo nome em ordem alfabética
 $query .= " ORDER BY nome ASC";
 
-// Preparar e executar a consulta
+// --- Preparação e execução da consulta ---
+// Cria um prepared statement para maior segurança (evita SQL Injection)
 $stmt = $conn->prepare($query);
+
+// --- Bind de parâmetros se houver filtros ---
+// str_repeat('s', count($params)) cria uma string com 's' repetido para cada parâmetro (tipo string)
 if (!empty($params)) {
     $stmt->bind_param(str_repeat('s', count($params)), ...$params);
 }
+
+// Executa a consulta
 $stmt->execute();
+
+// Recupera os resultados como objeto MySQLi
 $result = $stmt->get_result();
 
-// Opção padrão
+// --- Opção padrão no select ---
+// Exibe primeiro item vazio para o usuário selecionar
 echo '<option value="">Selecione o aluno</option>';
 
-// Gerar as opções
+// --- Geração das opções do select ---
+// Percorre os resultados e cria as tags <option> para cada aluno
 if ($result->num_rows > 0) {
     while ($aluno = $result->fetch_assoc()) {
         echo sprintf(
             '<option value="%s">%s (%s)</option>',
-            $aluno['id'],
-            htmlspecialchars($aluno['nome']),
-            htmlspecialchars($aluno['serie'])
+            $aluno['id'], // Valor que será enviado ao selecionar
+            htmlspecialchars($aluno['nome']), // Nome do aluno (HTML escapado)
+            htmlspecialchars($aluno['serie']) // Série do aluno (HTML escapado)
         );
     }
 }
 
+// Fecha statement e conexão com o banco para liberar recursos
 $stmt->close();
 $conn->close();
-?> 
