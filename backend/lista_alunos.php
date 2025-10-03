@@ -9,6 +9,24 @@ if (!isset($_SESSION['professor_id'])) { // Se não existe a variável de sessã
 
 require '../includes/conn.php'; // Inclui a conexão com o banco de dados para poder executar queries SQL
 
+// Configuração da paginação
+$por_pagina = 14;
+
+// Pegando a página atual pela URL, padrão 1
+$pagina = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
+
+// Calculando o OFFSET
+$inicio = ($pagina - 1) * $por_pagina;
+
+// Contando o total de registros
+$total_resultados = $conn->query("SELECT COUNT(*) as total FROM alunos")->fetch_assoc()['total'];
+
+// Calculando o total de páginas
+$total_paginas = ceil($total_resultados / $por_pagina);
+
+// Buscando os registros da página atual
+$result = $conn->query("SELECT id, nome, serie, email FROM alunos LIMIT $inicio, $por_pagina");
+
 // Verifica se a URL contém o parâmetro "deletar" (id do aluno a ser removido)
 if (isset($_GET['deletar'])) {
     $aluno_id = $_GET['deletar']; // Armazena o ID do aluno passado na URL
@@ -24,6 +42,19 @@ if (isset($_GET['deletar'])) {
         echo "<div class='alert alert-success fade show' role='alert'>
                 Aluno deletado com sucesso!
               </div>";
+
+        // Recalcular após deletar
+        $total_resultados = $conn->query("SELECT COUNT(*) as total FROM alunos")->fetch_assoc()['total'];
+        $total_paginas = ceil($total_resultados / $por_pagina);
+
+        // Ajustar página se necessário
+        if ($pagina > $total_paginas) {
+            $pagina = $total_paginas > 0 ? $total_paginas : 1;
+            $inicio = ($pagina - 1) * $por_pagina;
+        }
+
+        // Rebuscar registros
+        $result = $conn->query("SELECT id, nome, serie, email FROM alunos LIMIT $inicio, $por_pagina");
     } else {
         // Se houve erro na execução, exibe mensagem de erro
         echo "<div class='alert alert-danger fade show' role='alert'>
@@ -33,5 +64,3 @@ if (isset($_GET['deletar'])) {
 
     $stmt->close(); // Fecha o statement para liberar memória e recursos
 }
-
-$conn->close(); // Fecha a conexão com o banco de dados
