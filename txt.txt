@@ -1,0 +1,2 @@
+utilize o comando "composer require vlucas/phpdotenv" pra instalar a biblioteca necessária pra usar o .env
+se der erro basta abrir o arquivo php.ini no xampp e descomentar a linha ";extension=gd"
