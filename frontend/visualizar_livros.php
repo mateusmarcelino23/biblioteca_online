@@ -8,7 +8,7 @@ include('../backend/visualizar_livros.php');
 $result->data_seek(0);
 $capas = [];
 while ($row = $result->fetch_assoc()) {
-  $capas[] = $row['capa_url'] ?: 'default-cover.jpg';
+  $capas[] = $row['capa_url'];
 }
 echo "<!-- Total de livros: " . $result->num_rows . " -->";
 echo "<!-- Capas únicas encontradas: " . count(array_unique($capas)) . " -->";
@@ -479,14 +479,14 @@ $result->data_seek(0); // Resetar novamente para o loop principal
             $result->data_seek(0);
 
             while ($row = $result->fetch_assoc()):
-              $capa = $row['capa_url'] ?: 'default-cover.jpg';
+              $capa = $row['capa_url'];
 
               // Verificar se esta capa já foi processada
               if (!in_array($capa, $capasExibidas)):
                 $capasExibidas[] = $capa;
 
                 // Buscar TODAS as edições com esta capa (incluindo a atual)
-                $sql_edicoes = "SELECT * FROM livros WHERE capa_url = ?";
+                $sql_edicoes = "SELECT * FROM livros WHERE COALESCE(capa_url, 'assets/img/livro/sem-capa.png') = ?";
                 $stmt = $conn->prepare($sql_edicoes);
                 $stmt->bind_param("s", $capa);
                 $stmt->execute();
