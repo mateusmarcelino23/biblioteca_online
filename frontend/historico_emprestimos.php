@@ -128,7 +128,3 @@ include('../backend/historico_emprestimos.php')
 </body>
 
 </html>
-
-<?php
-$conn->close();
-?>

@@ -71,8 +71,8 @@ include('../backend/dashboard.php');
                 </a>
               </li>
               <li class="list-group-item" style="animation-delay: 0.7s">
-                <a href="editar_livro.php">
-                  <i class="fas fa-edit icon"></i> EDITAR LIVRO
+                <a href="lista_alunos.php">
+                  <i class="fas fa-users icon"></i> VISUALIZAR ALUNOS
                 </a>
               </li>
               <li class="list-group-item" style="animation-delay: 0.8s">
