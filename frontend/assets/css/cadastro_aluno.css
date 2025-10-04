@@ -132,7 +132,7 @@ body {
 
 .form-control {
     background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border-color, #ccc);
     color: var(--text-color);
     padding: 0.8rem 1rem;
     border-radius: 8px;
@@ -156,6 +156,19 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+.form-select {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1rem;
+    border: 1px solid var(--border-color, #ccc);
 }
 
 .btn {
