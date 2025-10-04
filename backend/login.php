@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../includes/conn.php';
+require_once '../config.php';
 
 // Função para retornar resposta JSON
 function responderJson($sucesso, $mensagem, $redirect = '') {

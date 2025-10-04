@@ -12,7 +12,7 @@ if (!isset($_SESSION['professor_id'])) {
 
 // --- Conexão com o banco de dados ---
 // Inclui arquivo que cria a conexão $conn
-include('../includes/conn.php');
+include('../config.php');
 
 // --- Consultas para Dashboard ---
 // Cada consulta busca uma estatística diferente para mostrar no dashboard

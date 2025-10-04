@@ -17,11 +17,11 @@ if (isset($_GET['search'])) {
     $search = htmlspecialchars(trim($_GET['search']));
 }
 
-        $sql = "SELECT COALESCE(capa_url, '') as capa_url, titulo, autor, COALESCE(preview_link, '') as preview_link, MIN(id) as id, COUNT(*) as quantidade 
-        FROM livros 
-        WHERE titulo LIKE ? OR isbn LIKE ? 
-        GROUP BY titulo, autor, isbn 
-        ORDER BY titulo ASC 
+        $sql = "SELECT COALESCE(capa_url, 'assets/img/livro/sem-capa.png') as capa_url, titulo, autor, COALESCE(preview_link, '') as preview_link, MIN(id) as id, COUNT(*) as quantidade
+        FROM livros
+        WHERE titulo LIKE ? OR isbn LIKE ?
+        GROUP BY titulo, autor, isbn
+        ORDER BY titulo ASC
         LIMIT ?, ?";
         
         $stmt = $conn->prepare($sql);
