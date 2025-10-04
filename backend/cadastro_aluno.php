@@ -21,9 +21,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Recebe os dados enviados pelo formulário
     // $_POST['campo'] acessa os valores do input com 'name="campo"'
-    $nome = $_POST['nome'];
-    $serie = $_POST['serie'];
-    $email = $_POST['email'];
+    // Recebe dados do POST
+    $nome = $_POST['nome'] ?? '';
+    $ano = $_POST['ano'] ?? '';
+    $sala = $_POST['sala'] ?? '';
+    $email = $_POST['email'] ?? '';
+
+    $sala = strtoupper($_POST['sala']);
+
+    // Monta a série
+    if (in_array($ano, ['1', '2', '3'])) {
+        $serie = $ano . ' Ano EM ' . $sala;
+    } else {
+        $serie = $ano . ' Ano ' . $sala;
+    }
+
 
     // Valida o formato do email usando filter_var
     // FILTER_VALIDATE_EMAIL retorna false se o email for inválido
@@ -61,9 +73,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     } else {
         // Prepara query para inserir os dados do novo aluno
-        $sql = "INSERT INTO alunos (nome, serie, email) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO alunos (nome, serie, email, professor_id) VALUES (?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sss", $nome, $serie, $email); // Todos são strings
+        $stmt->bind_param("sssi", $nome, $serie, $email, $_SESSION['professor_id']); // Todos são strings
 
         // Executa a inserção no banco
         if ($stmt->execute()) {
@@ -84,7 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit();
         }
     }
-
+    
     // Fecha statements para liberar recursos
     $stmt_check->close();
     $stmt->close();

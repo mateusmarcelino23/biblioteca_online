@@ -79,12 +79,30 @@ if (isset($_SESSION['toast'])) {
                         <input type="text" class="form-control" name="nome" id="nome" required
                             placeholder="Digite o nome completo">
                     </div>
-                    <div class="mb-3">
-                        <label for="serie" class="form-label">
-                            <i class="fas fa-graduation-cap"></i> Série
-                        </label>
-                        <input type="text" class="form-control" name="serie" id="serie" required
-                            placeholder="Digite a série">
+                    <div class="mb-3 d-flex">
+                        <div class="flex-grow-1 me-2">
+                            <label for="ano" class="form-label">Ano:</label>
+                            <select name="ano" id="ano" class="form-select" required>
+                                <option value="">Selecione o ano</option>
+                                <option value="1">1º Ano</option>
+                                <option value="2">2º Ano</option>
+                                <option value="3">3º Ano</option>
+                                <option value="4">4º Ano</option>
+                                <option value="5">5º Ano</option>
+                                <option value="6">6º Ano</option>
+                                <option value="7">7º Ano</option>
+                                <option value="8">8º Ano</option>
+                                <option value="9">9º Ano</option>
+                                <option value="1">1º Ano EM</option>
+                                <option value="2">2º Ano EM</option>
+                                <option value="3">3º Ano EM</option>
+                            </select>
+                        </div>
+                        <div class="flex-shrink-1">
+                            <label for="sala" class="form-label">Classe:</label>
+                            <input type="text" name="sala" id="sala" class="form-control" style="text-transform: uppercase;" maxlength="1"
+                                autocomplete="off" required>
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">
