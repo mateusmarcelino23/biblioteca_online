@@ -14,8 +14,7 @@ if (!isset($_SESSION['professor_id'])) {
 
 // Inclui o arquivo de conexão com o banco de dados
 // $conn será a variável que contém a conexão ativa
-require '../includes/conn.php';
-
+require '../config.php';
 // Verifica se o formulário foi enviado via método POST
 // $_SERVER["REQUEST_METHOD"] contém o método HTTP usado (GET, POST, etc)
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

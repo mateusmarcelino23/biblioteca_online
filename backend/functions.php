@@ -3,8 +3,7 @@
 function getTopAlunosPorSala($limite = 3)
 {
     // Inclui a conexão com o banco de dados
-    require '../includes/conn.php';
-
+    require '../config.php';
     // Query SQL para contar o total de empréstimos de cada aluno
     // JOIN com a tabela alunos para pegar nome e série
     // GROUP BY aluno para agregar os empréstimos

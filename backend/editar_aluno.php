@@ -11,8 +11,7 @@ if (!isset($_SESSION['professor_id'])) {
 }
 
 // Inclui o arquivo de conexão com o banco de dados
-require '../includes/conn.php';
-
+require '../config.php';
 // Verifica se o ID do aluno foi passado via URL
 if (!isset($_GET['id'])) {
     header("Location: visualizar_alunos.php");

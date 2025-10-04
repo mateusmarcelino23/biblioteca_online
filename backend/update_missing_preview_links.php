@@ -6,8 +6,7 @@ if (!isset($_SESSION['professor_id'])) {
     exit();
 }
 
-require '../includes/conn.php';
-
+require '../config.php';
 function fetchPreviewLinkByISBN($isbn) {
     $url = 'https://www.googleapis.com/books/v1/volumes?q=isbn:' . urlencode($isbn);
     $response = file_get_contents($url);

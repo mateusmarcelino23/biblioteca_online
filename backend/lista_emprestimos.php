@@ -1,7 +1,6 @@
 <?php
 session_start();
-require '../includes/conn.php';
-
+require '../config.php';
 if (!isset($_SESSION['professor_id'])) {
     header("Location: ../frontend/login.php");
     exit();

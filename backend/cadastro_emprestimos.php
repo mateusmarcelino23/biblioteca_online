@@ -16,8 +16,7 @@ if (!isset($_SESSION['professor_id'])) {
 }
 
 // Inclui arquivo de conexão com banco de dados
-require '../includes/conn.php';
-
+require '../config.php';
 // Variáveis para armazenar mensagens de notificação (toast)
 // $success_message será usada para mensagens de sucesso
 // $error_message será usada para mensagens de erro

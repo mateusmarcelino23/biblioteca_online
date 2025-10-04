@@ -1,7 +1,6 @@
 <?php
 // Inclui a conexão com o banco de dados
-require_once '../includes/conn.php';
-
+require '../config.php';
 // --- Construção da query base ---
 // Seleciona os campos do empréstimo, aluno e livro
 // JOINs são usados para combinar dados de várias tabelas

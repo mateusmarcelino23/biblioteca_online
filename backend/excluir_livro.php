@@ -11,8 +11,7 @@ if (!isset($_SESSION['professor_id'])) {
 
 // Inclui arquivo de conexão com o banco
 // Cria a variável $conn usada para consultas SQL
-require '../includes/conn.php';
-
+require '../config.php';
 // --- Verifica se o ID do livro foi passado via URL ---
 // Sem isso não sabemos qual livro excluir
 if (!isset($_GET['id'])) {

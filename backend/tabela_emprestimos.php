@@ -1,5 +1,5 @@
 <?php
-include '../includes/conn.php';
+require '../config.php';
 
 // Receber os filtros
 $filtroAluno = $_GET['filtro_aluno'] ?? '';

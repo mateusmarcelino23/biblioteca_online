@@ -16,8 +16,7 @@ if (!isset($_SESSION['professor_id'])) {
 
 // Inclui o arquivo de conexão com o banco de dados
 // $conn será a variável que contém a conexão ativa
-require '../includes/conn.php';
-
+require '../config.php';
 // Função para buscar livros na API do Google
 // Parâmetros:
 // - $termo: o termo de busca (nome ou ISBN)

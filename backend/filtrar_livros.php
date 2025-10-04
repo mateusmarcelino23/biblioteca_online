@@ -1,7 +1,6 @@
 <?php
 // Inclui o arquivo de conexão com o banco de dados
-require_once '../includes/conn.php';
-
+require '../config.php';
 // --- Construção da query base ---
 // Seleciona os campos id, título e ISBN da tabela livros
 // WHERE 1=1 é uma técnica que facilita adicionar filtros dinamicamente

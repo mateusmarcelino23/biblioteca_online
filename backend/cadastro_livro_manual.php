@@ -2,8 +2,7 @@
 // Inclui o arquivo de conexão com o banco de dados
 // Isso permite que a variável $conn exista aqui e possamos usar ela para consultas SQL
 // '../includes/conn.php' é o caminho relativo do arquivo de conexão
-include '../includes/conn.php';
-
+require '../config.php';
 // $quantidade = 1;
 // Essa linha foi comentada, mas seria usada para definir uma quantidade padrão de livros
 // No final, você definiu $quantidade mais abaixo, então não é necessária aqui

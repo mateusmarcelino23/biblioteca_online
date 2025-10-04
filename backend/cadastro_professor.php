@@ -12,8 +12,7 @@ if (!isset($_SESSION['professor_id'])) {
 
 // Inclui arquivo de conexão com o banco de dados
 // $conn será usado para todas as operações SQL
-require '../includes/conn.php';
-
+require '../config.php';
 // --- DELETAR PROFESSOR ---
 if (isset($_POST['delete'])) { // Se o formulário enviou a ação de deletar
     $professor_id = $_POST['professor_id']; // ID do professor que será deletado

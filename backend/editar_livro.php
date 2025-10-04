@@ -11,8 +11,7 @@ if (!isset($_SESSION['professor_id'])) {
 }
 
 // require(): inclui e executa o arquivo de conexão com o banco de dados
-require '../includes/conn.php';
-
+require '../config.php';
 // isset(): verifica se a variável $_GET['id'] existe
 if (!isset($_GET['id'])) {
     // header(): recarrega a página de edição de livros

@@ -1,7 +1,6 @@
 <?php
 session_start();
-include('../includes/conn.php');
-
+require '../config.php';
 // Ativar relatório de erros detalhados
 error_reporting(E_ALL);
 ini_set('display_errors', 1);

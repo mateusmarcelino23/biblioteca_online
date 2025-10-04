@@ -1,6 +1,5 @@
 <?php
-require '../includes/conn.php';
-
+require '../config.php';
 //Os alunos não precisam de senha, então não tem necessidade de puxar mais dados.
 $resultado = $conn->query("SELECT nome, serie, email FROM alunos");
 $res = $conn->query("

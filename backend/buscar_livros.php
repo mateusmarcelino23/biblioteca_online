@@ -13,7 +13,7 @@ if (!isset($_SESSION['professor_id'])) {
 
 // Inclui arquivo de conexão com banco de dados
 // $conn será usado para todas as operações SQL
-require '../includes/conn.php';
+require '../config.php';
 
 // --- Configuração de logs (comentada) ---
 // Permite registrar logs de processamento para auditoria ou depuração

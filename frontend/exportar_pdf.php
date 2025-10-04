@@ -1,6 +1,6 @@
 <?php
 session_start();
-require '../includes/conn.php'; // Arquivo de conexão com o banco
+require '../config.php';
 require '../fpdf/fpdf.php'; // Inclui a biblioteca FPDF
 
 // Verifica se o professor está logado

@@ -1,6 +1,5 @@
 <?php
-require '../includes/conn.php'; // Arquivo de conexão com o banco
-
+require '../config.php';
 // Consulta para obter todos os livros e suas quantidades
 $sql = "SELECT titulo, quantidade FROM livros";
 $result = $conn->query($sql);

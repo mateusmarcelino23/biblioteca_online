@@ -1,8 +1,7 @@
 <?php
 // Inclui o arquivo de conexão com o banco
 // Cria a variável $conn que será usada para consultas SQL
-require_once '../includes/conn.php';
-
+require '../config.php';
 // --- Construção da query base ---
 // Começamos com "WHERE 1=1" para facilitar a adição de filtros dinamicamente
 $query = "SELECT id, nome, serie FROM alunos WHERE 1=1";

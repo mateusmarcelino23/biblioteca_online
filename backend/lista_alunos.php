@@ -7,8 +7,7 @@ if (!isset($_SESSION['professor_id'])) { // Se não existe a variável de sessã
     exit(); // Interrompe a execução do script, garantindo que nada abaixo seja executado
 }
 
-require '../includes/conn.php'; // Inclui a conexão com o banco de dados para poder executar queries SQL
-
+require '../config.php';
 // Configuração da paginação
 $por_pagina = 14;
 

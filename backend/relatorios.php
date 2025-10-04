@@ -6,8 +6,7 @@ if (!isset($_SESSION['professor_id'])) {
     exit();
 }
 
-require '../includes/conn.php';
-
+require '../config.php';
 $sql = "
     SELECT 
         livros.titulo, 

@@ -1,8 +1,7 @@
 <?php
 session_start(); // Inicia a sessão do PHP para poder acessar variáveis de sessão, como o ID do professor
 
-require '../includes/conn.php'; // Inclui a conexão com o banco de dados, para podermos executar queries SQL
-
+require '../config.php';
 // Verifica se o professor está logado, se não estiver, redireciona para a página de login
 if (!isset($_SESSION['professor_id'])) {
     header("Location: ../frontend/login.php"); // Redireciona para login
