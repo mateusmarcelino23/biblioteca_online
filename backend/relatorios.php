@@ -16,6 +16,7 @@ $sql = "
     WHERE emprestimos.devolvido = '0'
     GROUP BY emprestimos.livro_id
     ORDER BY total_emprestimos DESC
+    LIMIT 10
 ";
 
 $sql_alunos = "
@@ -25,7 +26,7 @@ $sql_alunos = "
     WHERE emprestimos.devolvido = '0'
     GROUP BY emprestimos.aluno_id
     ORDER BY total_emprestimos DESC
-    LIMIT 5
+    LIMIT 10
 ";
 
 $sql_salas = "
@@ -35,7 +36,7 @@ $sql_salas = "
     
     GROUP BY alunos.serie
     ORDER BY total_emprestimos DESC
-    LIMIT 1
+    LIMIT 3
 ";
 
 $result_livros = $conn->query($sql);
