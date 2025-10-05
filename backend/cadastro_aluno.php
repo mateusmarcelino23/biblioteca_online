@@ -31,9 +31,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Monta a série
     if (in_array($ano, ['1', '2', '3'])) {
-        $serie = $ano . ' Ano EM ' . $sala;
+        $serie = $ano . 'º Ano EM ' . $sala;
     } else {
-        $serie = $ano . ' Ano ' . $sala;
+        $serie = $ano . 'º Ano ' . $sala;
     }
 
 
