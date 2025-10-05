@@ -155,10 +155,10 @@ if (isset($_SESSION['toast'])) {
                                 echo '<strong>' . htmlspecialchars($row['nome']) . '</strong>';
                                 echo '<div class="small"  style="color: var(--text-color);">' . htmlspecialchars($row['email']) . '</div>';
                                 echo '</div>';
-                                echo '<form method="POST" class="d-inline-block" onsubmit="return confirm(\'Tem certeza que deseja deletar este professor?\')">';
+                                // echo '<form method="POST" class="d-inline-block" onsubmit="return confirm(\'Tem certeza que deseja deletar este professor?\')">';
                                 echo '<input type="hidden" name="professor_id" value="' . $row['id'] . '">';
-                                echo '<button type="submit" name="delete" class="btn btn-danger btn-sm">';
-                                echo '<i class="fas fa-trash-alt"></i> Deletar';
+                                // echo '<button type="submit" name="delete" class="btn btn-danger btn-sm">';
+                                // echo '<i class="fas fa-trash-alt"></i> Deletar';
                                 echo '</button>';
                                 echo '</form>';
                                 echo '</div>';

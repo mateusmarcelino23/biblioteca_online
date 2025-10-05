@@ -22,7 +22,7 @@ if (isset($_GET['devolver_id'])) {
     $stmt->close();
 
     // Atualizar como devolvido
-    $sql = "UPDATE emprestimos SET devolvido = 'Sim', data_devolucao = CURDATE() WHERE id = ?";
+    $sql = "UPDATE emprestimos SET devolvido = '1', data_devolucao = CURDATE() WHERE id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $emprestimo_id);
 

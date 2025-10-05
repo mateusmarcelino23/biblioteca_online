@@ -36,13 +36,13 @@ function gerarDadosEmprestimos($conn, $data_inicial, $data_final, $status) {
 
     switch ($status) {
         case 'pendente':
-            $where[] = "e.devolvido = 'Nao' AND e.data_devolucao >= CURRENT_DATE()";
+            $where[] = "e.devolvido = 0 AND e.data_devolucao >= CURRENT_DATE()";
             break;
         case 'devolvido':
-            $where[] = "e.devolvido = 'Sim'";
+            $where[] = "e.devolvido = 1";
             break;
         case 'atrasado':
-            $where[] = "e.devolvido = 'Nao' AND e.data_devolucao < CURRENT_DATE()";
+            $where[] = "e.devolvido = 0 AND e.data_devolucao < CURRENT_DATE()";
             break;
     }
 
@@ -131,7 +131,7 @@ function gerarTabelaEmprestimos($dados) {
     $html = '<table class="table table-striped">';
     $html .= '<thead><tr><th>Data</th><th>Aluno</th><th>Livro</th><th>Professor</th><th>Devolução</th><th>Status</th></tr></thead><tbody>';
     while ($item = $dados->fetch_assoc()) {
-        $status = ($item['devolvido'] === 'Sim' || $item['devolvido'] === '1') ? 'Devolvido' : 
+        $status = ($item['devolvido'] === 1 || $item['devolvido'] === 1) ? 'Devolvido' : 
             (strtotime($item['data_devolucao']) < time() ? 'Atrasado' : 'Pendente');
         $html .= '<tr>';
         $html .= '<td>' . date('d/m/Y', strtotime($item['data_emprestimo'])) . '</td>';

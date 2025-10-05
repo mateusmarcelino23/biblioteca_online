@@ -158,7 +158,7 @@ $emprestimos_recentes = $stmt->get_result();
                     </div>
                     <div class="card-body">
                         <div class="quick-actions">
-                            <a href="cadastrar_professor.php" class="btn btn-primary">
+                            <a href="professores.php" class="btn btn-primary">
                                 <i class="fas fa-user-plus"></i>
                                 Novo Professor
                             </a>
@@ -166,14 +166,14 @@ $emprestimos_recentes = $stmt->get_result();
                                 <i class="fas fa-file-export"></i>
                                 Exportar Relatório
                             </a>
-                            <a href="emprestimos_atrasados.php" class="btn btn-danger">
+                            <!-- <a href="emprestimos_atrasados.php" class="btn btn-danger">
                                 <i class="fas fa-exclamation-triangle"></i>
                                 Ver Atrasos
                             </a>
                             <a href="backup.php" class="btn btn-info">
                                 <i class="fas fa-database"></i>
                                 Backup do Sistema
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </div>

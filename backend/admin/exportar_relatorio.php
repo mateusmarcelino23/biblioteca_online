@@ -33,13 +33,13 @@ function gerarDadosEmprestimos($conn, $data_inicial, $data_final, $status) {
 
     switch ($status) {
         case 'pendente':
-            $where[] = "e.devolvido = 'Nao' AND e.data_devolucao >= CURRENT_DATE()";
+            $where[] = "e.devolvido = 0 AND e.data_devolucao >= CURRENT_DATE()";
             break;
         case 'devolvido':
-            $where[] = "e.devolvido = 'Sim'";
+            $where[] = "e.devolvido = 1";
             break;
         case 'atrasado':
-            $where[] = "e.devolvido = 'Nao' AND e.data_devolucao < CURRENT_DATE()";
+            $where[] = "e.devolvido = 0 AND e.data_devolucao < CURRENT_DATE()";
             break;
     }
 

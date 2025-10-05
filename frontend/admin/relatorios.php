@@ -12,6 +12,7 @@ $stmt = $conn->prepare("
         (SELECT COUNT(*) FROM livros) as total_livros
     FROM dual
 ");
+/* verificar se data devolucao < data atual */
 $stmt->execute();
 $stats = $stmt->get_result()->fetch_assoc();
 ?>

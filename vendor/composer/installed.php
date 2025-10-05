@@ -3,7 +3,7 @@
         'name' => 'biblioteca/mvc-biblioteca',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'a5cb2b00dc8d26104f593649e04101ad67053861',
+        'reference' => 'a9d1206603e2c2b7ad0dfe186546f2896b1092e8',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'biblioteca/mvc-biblioteca' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'a5cb2b00dc8d26104f593649e04101ad67053861',
+            'reference' => 'a9d1206603e2c2b7ad0dfe186546f2896b1092e8',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

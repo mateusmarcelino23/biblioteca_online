@@ -225,6 +225,57 @@ $professores = $stmt->get_result();
         </div>
     </div>
 
+    <!-- Editar Professor Modal -->
+    <div class="modal fade" id="editarProfessorModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar Professor</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formEditarProfessor" method="POST" action="../../backend/admin/salvar_professor.php">
+                        <input type="hidden" name="id">
+                        <div class="mb-3">
+                            <label class="form-label">Nome</label>
+                            <input type="text" class="form-control" name="nome" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="cpf">CPF</label>
+                            <input type="text" class="form-control" name="cpf" required maxlength="14">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Senha (deixe em branco para manter)</label>
+                            <input type="password" class="form-control" name="senha" minlength="6">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Status</label>
+                            <select class="form-select" name="ativo" required>
+                                <option value="1">Ativo</option>
+                                <option value="0">Inativo</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input type="hidden" name="admin" value="0">
+                                <input type="checkbox" class="form-check-input" name="admin" value="1" id="adminCheckEdit">
+                                <label class="form-check-label" for="adminCheckEdit">Administrador</label>
+                            </div>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+
     <!-- Theme Toggle Button -->
     <button class="theme-toggle" id="themeToggle">
         <i class="fas fa-moon" id="themeIcon"></i>
@@ -361,7 +412,36 @@ $professores = $stmt->get_result();
         }
 
         function editarProfessor(id) {
-            // Implementar edição
+            $.ajax({
+                url: '../../backend/admin/salvar_professor.php',
+                type: 'GET',
+                data: { id: id },
+                success: function(response) {
+                    if (response.success) {
+                        const prof = response.professor;
+                        $('#editarProfessorModal [name="id"]').val(prof.id);
+                        $('#editarProfessorModal [name="nome"]').val(prof.nome);
+                        $('#editarProfessorModal [name="email"]').val(prof.email);
+                        $('#editarProfessorModal [name="cpf"]').val(prof.cpf);
+                        $('#editarProfessorModal [name="admin"]').prop('checked', prof.admin == 1);
+                        $('#editarProfessorModal [name="ativo"]').val(prof.ativo);
+                        $('#editarProfessorModal').modal('show');
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Erro!',
+                            text: response.message
+                        });
+                    }
+                },
+                error: function() {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Erro!',
+                        text: 'Ocorreu um erro ao buscar os dados do professor.'
+                    });
+                }
+            });
         }
 
         function verHistorico(id) {
@@ -372,6 +452,50 @@ $professores = $stmt->get_result();
         $('#formNovoProfessor').on('submit', function(e) {
             e.preventDefault();
             salvarProfessor();
+        });
+
+        $('#formEditarProfessor').on('submit', function(e) {
+            e.preventDefault();
+            const form = $(this);
+            const data = {
+                id: form.find('[name="id"]').val(),
+                nome: form.find('[name="nome"]').val(),
+                email: form.find('[name="email"]').val(),
+                cpf: form.find('[name="cpf"]').val(),
+                senha: form.find('[name="senha"]').val(),
+                ativo: form.find('[name="ativo"]').val(),
+                admin: form.find('[name="admin"]').is(':checked') ? 1 : 0
+            };
+
+            $.ajax({
+                url: '../../backend/admin/salvar_professor.php',
+                type: 'POST',
+                data: data,
+                success: function(response) {
+                    if (response.success) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Sucesso!',
+                            text: 'Professor atualizado com sucesso!'
+                        }).then(() => {
+                            location.reload();
+                        });
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Erro!',
+                            text: response.message
+                        });
+                    }
+                },
+                error: function() {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Erro!',
+                        text: 'Ocorreu um erro ao atualizar o professor.'
+                    });
+                }
+            });
         });
     </script>
 </body>
