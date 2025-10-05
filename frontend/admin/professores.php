@@ -20,6 +20,7 @@ $professores = $stmt->get_result();
 
 <!DOCTYPE html>
 <html lang="pt" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,6 +31,7 @@ $professores = $stmt->get_result();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="css/admin.css">
 </head>
+
 <body>
     <!-- Sidebar -->
     <div class="sidebar">
@@ -134,9 +136,9 @@ $professores = $stmt->get_result();
                                     <td>
                                         <div class="d-flex align-items-center">
                                             <img src="https://ui-avatars.com/api/?name=<?php echo urlencode($prof['nome']); ?>&background=random"
-                                                 alt="<?php echo htmlspecialchars($prof['nome']); ?>"
-                                                 class="rounded-circle me-2"
-                                                 style="width: 32px; height: 32px;">
+                                                alt="<?php echo htmlspecialchars($prof['nome']); ?>"
+                                                class="rounded-circle me-2"
+                                                style="width: 32px; height: 32px;">
                                             <?php echo htmlspecialchars($prof['nome']); ?>
                                         </div>
                                     </td>
@@ -188,7 +190,7 @@ $professores = $stmt->get_result();
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="formNovoProfessor">
+                    <form id="formNovoProfessor" method="POST" action="../../backend/admin/salvar_professor.php">
                         <div class="mb-3">
                             <label class="form-label">Nome</label>
                             <input type="text" class="form-control" name="nome" required>
@@ -198,22 +200,28 @@ $professores = $stmt->get_result();
                             <input type="email" class="form-control" name="email" required>
                         </div>
                         <div class="mb-3">
+                            <label class="form-label" for="cpf">CPF</label>
+                            <input type="text" class="form-control" name="cpf" required maxlength="14">
+                        </div>
+                        <div class="mb-3">
                             <label class="form-label">Senha</label>
                             <input type="password" class="form-control" name="senha" required minlength="6">
                         </div>
                         <div class="mb-3">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" name="admin" id="adminCheck">
+                                <input type="hidden" name="admin" value="0">
+                                <input type="checkbox" class="form-check-input" name="admin" value="1" id="adminCheck">
                                 <label class="form-check-label" for="adminCheck">Administrador</label>
                             </div>
                         </div>
-                    </form>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary" onclick="salvarProfessor()">Salvar</button>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
                 </div>
             </div>
+            </form>
         </div>
     </div>
 
@@ -280,6 +288,7 @@ $professores = $stmt->get_result();
             const data = {
                 nome: form.find('[name="nome"]').val(),
                 email: form.find('[name="email"]').val(),
+                cpf: form.find('[name="cpf"]').val(),
                 senha: form.find('[name="senha"]').val(),
                 admin: form.find('[name="admin"]').is(':checked') ? 1 : 0
             };
@@ -331,7 +340,10 @@ $professores = $stmt->get_result();
                     $.ajax({
                         url: '../../backend/admin/alterar_status_professor.php',
                         type: 'POST',
-                        data: { id, status: novoStatus ? 1 : 0 },
+                        data: {
+                            id,
+                            status: novoStatus ? 1 : 0
+                        },
                         success: function(response) {
                             if (response.success) {
                                 location.reload();
@@ -355,6 +367,13 @@ $professores = $stmt->get_result();
         function verHistorico(id) {
             // Implementar visualização de histórico
         }
+
+        // Prevent form submit and use AJAX
+        $('#formNovoProfessor').on('submit', function(e) {
+            e.preventDefault();
+            salvarProfessor();
+        });
     </script>
 </body>
+
 </html>
