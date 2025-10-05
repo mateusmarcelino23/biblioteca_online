@@ -59,13 +59,24 @@ Recebe o email do professor.
 - Mesma lógica do nome.
 */
 
+$cpf = trim($_POST['cpf'] ?? '');
+
 $senha = trim($_POST['senha'] ?? '');
 /*
 Recebe a senha do professor.
 - Será criptografada antes de salvar no banco.
 */
 
-$admin = isset($_POST['admin']) ? 1 : 0;
+$admin = $_POST['admin'] ?? 0;
+
+// Se o valor de admin for um array (devido ao input hidden + checkbox), pegar o último valor
+if (is_array($admin)) {
+    $admin = end($admin);
+}
+
+// Garantir que o valor seja 0 ou 1
+$admin = ($admin == '1' || $admin === 1) ? 1 : 0;
+
 /*
 Define se o professor terá privilégios de administrador.
 - Checkbox HTML envia valor apenas se marcado.
@@ -136,33 +147,26 @@ Criptografa a senha usando o algoritmo padrão do PHP (normalmente bcrypt).
 // Inserir novo professor no banco
 // ------------------------
 
-$stmt = $conn->prepare("
-    INSERT INTO professores (nome, email, senha, admin, ativo, data_cadastro) 
-    VALUES (?, ?, ?, ?, 1, NOW())
-");
-/*
-Query para inserir novo professor.
-- ? são placeholders para dados fornecidos pelo usuário.
-- 'ativo' = 1 significa que o professor está ativo por padrão.
-- NOW() define a data de cadastro como o momento atual.
-*/
+$sql_insert = "INSERT INTO professores (nome, email, cpf, senha, admin) VALUES (?, ?, ?, ?, ?)";
+$stmt_insert = $conn->prepare($sql_insert);
 
-$stmt->bind_param("sssi", $nome, $email, $senha_hash, $admin);
+// Associa parâmetros à query
+$stmt_insert->bind_param("ssssi", $nome, $email, $cpf, $senha_hash, $admin);
 /*
 Vincula os valores aos placeholders:
 - 's' = string (nome, email, senha_hash)
 - 'i' = inteiro (admin)
 */
 
-if ($stmt->execute()) {
+if ($stmt_insert->execute()) {
     responder(true, 'Professor cadastrado com sucesso!');
     // Retorna sucesso se a inserção ocorreu sem erros
 } else {
-    responder(false, 'Erro ao cadastrar professor: ' . $conn->error);
+    responder(false, 'Erro ao cadastrar professor: ' . $stmt_insert->error);
     // Retorna erro detalhando a falha do MySQL
 }
 
-$stmt->close();
+$stmt_insert->close();
 // Fecha o statement para liberar recursos
 
 $conn->close();
