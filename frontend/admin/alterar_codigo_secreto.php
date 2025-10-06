@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../../includes/conn.php';
+include '../../config.php';
 
 if (!isset($_SESSION['admin']) || $_SESSION['admin'] != 1) {
     header(header: "Location: ../../frontend/login.php");

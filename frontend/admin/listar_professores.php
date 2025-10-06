@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../../includes/conn.php';
+include '../../config.php';
 
 // Verifica se é admin
 if (!isset($_SESSION['admin']) || $_SESSION['admin'] != 1) {

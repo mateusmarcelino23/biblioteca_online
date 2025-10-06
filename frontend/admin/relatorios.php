@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once '../../includes/auth_admin.php';
-require_once '../../includes/conn.php';
+require_once '../../config.php';
 
 // Buscar estatísticas gerais
 $stmt = $conn->prepare("
