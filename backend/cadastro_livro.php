@@ -22,7 +22,7 @@ require '../config.php';
 // - $termo: o termo de busca (nome ou ISBN)
 // - $tipo: 'nome' ou 'isbn', determina como a busca será feita
 function buscarLivrosGoogle($termo, $tipo = 'nome')
-{
+{         
     // Monta a query da API
     // Se for ISBN, adiciona "isbn:" na frente do termo
     $query = $tipo === 'isbn' ? 'isbn:' . urlencode($termo) : urlencode($termo);
@@ -73,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['cadastrar'])) {
                 $descricao = $livro['volumeInfo']['description'] ?? 'Sem descrição';
                 // Pega o primeiro identificador da indústria (geralmente ISBN)
                 $isbn = $livro['volumeInfo']['industryIdentifiers'][0]['identifier'] ?? 'Não informado';
-                $quantidade = 1; // Definimos quantidade padrão como 1
+                $quantidade = $_POST['qntd']; // Definimos quantidade padrão como 1
 
                 // Verifica se o livro já existe no banco de dados
                 $sql_check = "SELECT id FROM livros WHERE isbn = ?";

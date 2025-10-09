@@ -1,2 +1,2 @@
-ErrorDocument 404 /gestao_de_biblioteca/includes/404.php
+ErrorDocument 404 /biblioteca_online/includes/404.php
 RewriteEngine On

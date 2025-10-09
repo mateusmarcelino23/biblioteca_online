@@ -339,6 +339,9 @@
             placeholder="Digite o ano de publicação"
             class="form-input">
         </div>
+        <div>
+          <input type="number" name="qntd" placeholder="quantidade">
+        </div>
 
         <button type="submit" class="submit-btn">
           <svg class="submit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">

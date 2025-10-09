@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@capacitor-community/electron": "^5.0.1",
     "@capacitor/cli": "^7.4.3",
     "@capacitor/core": "^7.4.3"
   }

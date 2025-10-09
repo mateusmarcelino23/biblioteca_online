@@ -66,11 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt_update = $conn->prepare($sql_update);
 
     // Associa os parâmetros à query
-    if ($professor_id === null) {
-        $stmt_update->bind_param("ssssi", $nome, $serie, $email, $professor_id, $id);
-    } else {
-        $stmt_update->bind_param("sssii", $nome, $serie, $email, $professor_id, $id);
-    }
+    $stmt_update->bind_param("sssii", $nome, $serie, $email, $professor_id, $id);
 
     // Executa a query de atualização
     if ($stmt_update->execute()) {

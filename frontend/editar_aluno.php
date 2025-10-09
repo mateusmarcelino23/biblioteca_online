@@ -93,6 +93,18 @@ include('../backend/editar_aluno.php');
                             value="<?= htmlspecialchars($aluno['email']) ?>" placeholder="Digite o email">
                     </div>
 
+                    <div class="mb-3">
+                        <label for="professor_id" class="form-label">
+                            <i class="fas fa-chalkboard-teacher"></i> Professor Responsável
+                        </label>
+                        <select class="form-control" id="professor_id" name="professor_id">
+                            <option value="">Selecione um professor (opcional)</option>
+                            <?php foreach ($professores as $prof): ?>
+                                <option value="<?php echo $prof['id']; ?>" <?php echo ($aluno['professor_id'] == $prof['id']) ? 'selected' : ''; ?>><?php echo htmlspecialchars($prof['nome']); ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+
                     <button type="submit" class="btn btn-primary w-100">
                         <i class="fas fa-save"></i> Atualizar Aluno
                     </button>

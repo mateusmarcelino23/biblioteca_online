@@ -1,0 +1,10 @@
+{
+  "appId": "com.escola.biblioteca",
+  "appName": "Biblooteca Online",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "biblioteca-electron",
+  "version": "1.0.0",
+  "description": "App Electron para Biblioteca Online",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^23.0.0"
+  },
+  "build": {
+    "appId": "com.biblioteca.online",
+    "asar": true,
+    "files": [
+      "**/*",
+      "!node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "icon.png"
+    }
+  }
+}
