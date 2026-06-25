@@ -1,5 +1,7 @@
 ![](media/image1.png){width="5.905555555555556in" height="8.35in"}
 
+⚠ Nota de transparência sobre o desenvolvimento: a IA foi utilizada como ferramenta de apoio na implementação de partes do código. O sistema foi desenvolvido em dupla, com responsabilidade compartilhada por revisão, ajustes, estruturação e integração das funcionalidades.
+
 **Descrição**
 
 Este sistema de gerenciamento de biblioteca é uma aplicação desenvolvida
